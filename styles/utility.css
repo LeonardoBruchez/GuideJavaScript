@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(87, 49, 131);
+  font: 500 1.2rem arial;
+}
+
+.box-js {
+  outline: 3px solid rgb(118, 30, 233);
+  background-color: rgb(75, 22, 134);
+  box-shadow: rgba(0, 0, 0, 0.342) 4px 4px 10px;
+  border-radius: 1rem;
+  width: 600px;
+
+  & img {
+    border: 4px solid rgb(56, 9, 109);
+  }
+}
+
+ul {
+  appearance: none;
+  text-decoration: none;
+  list-style-type: none;
+}

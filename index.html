@@ -1,14 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My room study</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>
-    Página de anotações,atalhos e dicas
-  </h1>
+  <main>
+    <header>
+      <h1>
+        My room study
+      </h1>
+    </header>
+
+    <article id="java-script">
+      <div  class="titleJS">
+        <h2>
+          Java Script
+        </h2>
+        <img src="assets/JavaScript-logo.png" alt="">
+      </div>
+
+      <section id="sumary">
+        <h3>Sumário</h3>
+        <ol type="1">
+          <li><a href="#addScript">Como adicionar o script js no HTML?</a></li>
+          <li><a href="#variables">Variáveis</a></li>
+          <li><a href="#numberAndString">Number e string</a></li>
+          <li><a href="#ValueConversion">Convertendo valores</a></li>
+          <li><a href="#templateLiterals">(templateLiterals)</a></li>
+          <li><a href="#converter">Mostrar segundo número após a virgula</a></li>
+          <li><a href="#transformPoint">Transformar numero com " . " em " , "</a></li>
+          <li><a href="#converterCoin">Conversão de número (Real,Dólar e Euro)</a></li>
+        </ul>
+      </section>
+
+      <section class="box-js" id="addScript">
+        <h3>
+          1. Como adicionar o script js no HTML?
+        </h3>
+        <p> Colocar sempre no fim do &#8249body&#8250 dentro do HTML</p>
+        <img src="assets/script-print.PNG" alt="">
+      </section>
+
+      <section class="box-js" id="variables">
+        <h3>2. Variáveis</h3>
+        <p>Uma variável é um contêiner (ou rótulo) que armazena dados (como números ou texto) na memória do computador, permitindo que você os use e modifique no seu código.</p>
+        <img src="assets/variavel.PNG" alt="">
+        <p>'marca' e 'Número' são as variáveis presentes.</p>
+      </section>
+
+      <section class="box-js" id="numberAndString">
+        <h3>
+          3. Number e string
+        </h3>
+        <p><strong>String:</strong></p>
+        <ul>
+          <li>Texto ou uma sequência de caracteres (letras, espaços, símbolos).</li>
+          <li>Não permite cálculos matemáticos.</li>
+          <li>Ex: "Olá Mundo", "Nike"</li>
+          <li>Importante: String sempre são usadas dentro de aspas simples (' ') ou duplas (" ").</li>
+        </ul>
+        <img src="assets/string.png" alt="">
+        <p id="Nike">"Nike" é uma string.</p>
+        <div class="Line"></div>
+        <p><strong>Number:</strong></p>
+        <ul>
+          <li>Valores matemáticos (inteiros ou decimais).</li>
+          <li>Permite cálculos (somar, subtrair, multiplicar).	</li>
+          <li>Ex: 4, 10, 3.14, -5</li>
+          <li>Importante:  sempre é usada fora das aspas</li>
+        </ul>
+        <img src="assets/number.png" alt="">
+        <p id="number-4">4 é um number.</p>
+        
+      </section>
+
+      <section class="box-js" id="ValueConversion">
+        <h3>4. Convertendo valores:</h3>
+
+        <div class="toString">
+          <strong>Number para string</strong>
+          <img src="assets/numeroToString.PNG" alt="">
+          <p>Colocar o number ao lado de .toString( )</p>
+        </div>
+        <div class="toNumber">
+          <strong>String para Number</strong>
+          <img src="assets/conversaoParaNumber.PNG" alt="">
+          <p>console.log(typeof ToNumber) <br> typeof mostra o tipo,se é string ou number,boolean,etc...</p>
+        </div>
+      </section>
+
+
+      <section class="box-js" id="templateLiterals">
+        <h3>5. Criar variáveis e adicionar elas ao texto</h3>
+        <strong>(templateLiterals)</strong>
+        <div>
+          <span>Ex:</span>
+          <p>'O aluno Leonardo de 19 anos tirou 7 na prova'</p>
+          <img src="assets/node-templateliteralsPNG.PNG" alt="">
+          <p>`O aluno ${aluno} de ${idade} anos tirou ${nota} na prova`</p>
+          <p>Basta colocar a variável dentro de ${} para mencionar ela,e colocar crases `` no lugar das aspas em volta</p>
+        </div>
+      </section>
+
+      <section class="box-js" id="converter">
+        <h3>6. Mostrar segundo número após a virgula:</h3>
+        <div>
+          <img src="assets/centesimo.PNG" alt="">
+          <img src="assets/secondLether.PNG" alt="">
+        </div>
+        <h3 id="transformPoint">7. Transformar número com " . "  em " , " :</h3>
+        <div>
+          <img src="assets/pontoEmVirgula.PNG" alt="">
+          <img src="assets/resultPontoEmVirgula.PNG" alt="">
+        </div>
+      </section>
+
+      <section class="box-js" id="converterCoin">
+        <h3>8. Conversão de real, dólar e euro</h3>
+        <div>
+          <p>Real R$:</p>
+          <div>
+            <img src="assets/realToBrl.PNG" alt="">
+            <img src="assets/resultRealToBRL.PNG" alt="">
+          </div>
+        </div>
+        
+        <div>
+          <p>Dólar USD</p>
+          <div>
+            <img src="assets/convertToUSD.PNG" alt="">
+            <img src="assets/resultToUSD.PNG" alt="">
+          </div>
+        </div>
+        <div>
+          <p>Euro €</p>
+          <div>
+            <img src="assets/convertToEUR.PNG" alt="">
+            <img src="assets/resultToEUR.PNG" alt="">
+          </div>
+        </div>
+      </section>
+
+      
+    </article>
+
+  </main>
+  <a href="#java-script" id="button">
+    <img src="https://icons.iconarchive.com/icons/icons8/ios7/128/Arrows-Up-4-icon.png" width="60" height="60">
+  </a>
+  <script src="scripts.js"></script>
+
+  
 </body>
 </html>
