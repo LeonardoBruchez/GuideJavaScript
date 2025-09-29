@@ -282,8 +282,6 @@
       border-radius: 1rem;
     }
     }
-
-    
   }
 
   & #converterCoin {
@@ -315,6 +313,53 @@
     }
 
     
+  }
+
+  & #ArithmeticOperators {
+    margin: auto;
+    padding: 1rem;
+    & h3 {
+      font: 700 1.7rem "Inter",sans-serif;
+      text-align: center;
+      margin-block: 1rem;
+    }
+
+    & ul {
+      padding-top: 1rem;
+      margin: auto;
+      margin-bottom: 2rem;
+      width: fit-content;
+      display: grid;
+      gap: 1rem;
+      & li {
+        display: flex;
+        font: 600 1.4rem "Inter",sans-serif;
+        gap: 0.5rem;
+        & :nth-child(1),:nth-child(2) {
+          color: rgb(255, 255, 255);
+          background-color: rgb(98, 0, 255);
+          width: 25px;
+          text-align: center;
+          display: block;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+
+    & a {
+        color: rgb(136, 75, 206);
+        text-decoration: none;
+        background-color: white;
+        padding: 1rem 3rem;
+        width: fit-content;
+        border-radius: 1rem;
+        margin-block: 1rem;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+
   }
 
   
