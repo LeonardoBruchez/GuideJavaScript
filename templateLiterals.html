@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>templateLiterals</title>
+</head>
+<style>
+  body {
+    color: white;
+    background-color: rgb(32, 2, 56);
+    font: 600 1.4rem arial;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    position: fixed;
+    display: flex;
+    justify-self: center;
+    bottom: 0;
+    background-color: rgb(75, 12, 126);
+    width: fit-content;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    position: relative;
+    transform: translate(300px 300px);
+    transition: background-color 750ms;
+
+    &:hover {
+      background-color: rgb(104, 26, 168);
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font: 600 1.4rem arial;
+  }
+</style>
+<body>
+  <h1>TemplateLiterals</h1>
+  <a href="./index.html">
+    <span>Voltar</span>
+  </a>
+  <script>
+    var nome = prompt("Qual seu nome?")
+    console.log(nome)
+    var idade = prompt(`Olá ${nome}, Quantos anos você tem?`)
+    console.log(idade)
+    alert("Que legal!")
+    document.write(`Seu nome é <strong>${nome}</strong> e você tem <strong>${idade}</strong> anos. <br>`)
+    document.write(`Seu nome tem <strong>${nome.length}</strong> letras. <br>`)
+    document.write('Para contar a quantidade de letras existentes no nome considere usar ${variavel.length} igual mostra na foto abaixo: <br>')
+    document.write(`<img src="./assets/length.PNG" alt="">`)
+  </script>
+</body>
+</html>
