@@ -12,6 +12,11 @@
     font: 600 1.4rem arial;
   }
 
+  main {
+    max-width: 375px;
+    width: 100%;
+  }
+
   h1 {
     text-align: center;
   }
@@ -39,12 +44,21 @@
     text-decoration: none;
     font: 600 1.4rem arial;
   }
+
+  @media (width >= 43.75rem){
+    main {
+      max-width: 700px;
+      width: 100%;
+    }
+  }
 </style>
 <body>
-  <h1>TemplateLiterals</h1>
-  <a href="../index.html">
-    <span>Voltar</span>
-  </a>
+  <main>
+    <h1>TemplateLiterals</h1>
+    <a href="../index.html">
+      <span>Voltar</span>
+    </a>
+  </main>
   <script>
     var nome = prompt("Qual seu nome?")
     console.log(nome)
