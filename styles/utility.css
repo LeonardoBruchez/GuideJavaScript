@@ -8,7 +8,7 @@ body {
   background-color: rgb(75, 22, 134);
   box-shadow: rgba(0, 0, 0, 0.342) 4px 4px 10px;
   border-radius: 1rem;
-  width: 600px;
+  width: 22rem;
 
   & img {
     border: 4px solid rgb(56, 9, 109);
@@ -19,4 +19,10 @@ ul {
   appearance: none;
   text-decoration: none;
   list-style-type: none;
+}
+
+@media (width >= 43.75rem) {
+  .box-js {
+    width: 37.5rem;
+  }
 }

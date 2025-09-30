@@ -31,10 +31,10 @@
           <li><a href="#addScript">Como adicionar o script js no HTML?</a></li>
           <li><a href="#variables">Variáveis</a></li>
           <li><a href="#numberAndString">Number e string</a></li>
-          <li><a href="#ValueConversion">Convertendo valores</a></li>
+          <li><a href="#ValueConversion">Conversão de number para string e string para number</a></li>
           <li><a href="#templateLiterals">(templateLiterals)</a></li>
           <li><a href="#converter">Mostrar segundo número após a virgula</a></li>
-          <li><a href="#transformPoint">Transformar numero com " . " em " , "</a></li>
+          <li><a href="#transformPoint">Transformar numero com " . " para " , "</a></li>
           <li><a href="#converterCoin">Conversão de número (Real,Dólar e Euro)</a></li>
           <li><a href="#ArithmeticOperators">Operadores aritméticos</a></li>
         </ul>
@@ -82,7 +82,7 @@
       </section>
 
       <section class="box-js" id="ValueConversion">
-        <h3>4. Convertendo valores:</h3>
+        <h3>4. Convertendo valores</h3>
 
         <div class="toString">
           <strong>Number para string</strong>
@@ -92,7 +92,8 @@
         <div class="toNumber">
           <strong>String para Number</strong>
           <img src="assets/conversaoParaNumber.PNG" alt="">
-          <p>console.log(typeof ToNumber) <br> typeof mostra o tipo,se é string ou number,boolean,etc...</p>
+          <p>console.log(typeof ToNumber)</p>
+          <p>typeof mostra o tipo,se é string ou number,boolean,etc...</p>
         </div>
       </section>
 
@@ -114,12 +115,18 @@
         <h3>6. Mostrar segundo número após a virgula:</h3>
         <div>
           <img src="assets/centesimo.PNG" alt="">
-          <img src="assets/secondLether.PNG" alt="">
+          <div>
+            <p>=</p>
+            <img src="assets/secondLether.PNG" alt="">
+          </div>
         </div>
         <h3 id="transformPoint">7. Transformar número com " . "  em " , " :</h3>
         <div>
           <img src="assets/pontoEmVirgula.PNG" alt="">
-          <img src="assets/resultPontoEmVirgula.PNG" alt="">
+          <div>
+            <p>=</p>
+            <img src="assets/resultPontoEmVirgula.PNG" alt="">
+          </div>
         </div>
       </section>
 
@@ -128,7 +135,12 @@
         <div>
           <p>Real R$:</p>
           <div>
-            <img src="assets/realToBrl.PNG" alt="">
+            <p>var n1 = 1543.5</p>
+            <p>console.log(n1)</p>
+            <p>console.log(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))</p>
+          </div>
+          <div>
+            <p>= </p>
             <img src="assets/resultRealToBRL.PNG" alt="">
           </div>
         </div>
@@ -136,14 +148,24 @@
         <div>
           <p>Dólar USD</p>
           <div>
-            <img src="assets/convertToUSD.PNG" alt="">
+            <p>var n2 = 1543.5</p>
+            <p>console.log(n2)</p>
+            <p>console.log(n2.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))</p>
+          </div>
+          <div>
+            <p>=</p>
             <img src="assets/resultToUSD.PNG" alt="">
           </div>
         </div>
         <div>
           <p>Euro €</p>
           <div>
-            <img src="assets/convertToEUR.PNG" alt="">
+            <p>var n3 = 1543.5</p>
+            <p>console.log(n3)</p>
+            <p>console.log(n3.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}))</p>
+          </div>
+          <div>
+            <p>=</p>
             <img src="assets/resultToEUR.PNG" alt="">
           </div>
         </div>

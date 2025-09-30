@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Operadores aritméticos</title>
+  <link rel="stylesheet" href="operators.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 </head>
@@ -13,7 +14,7 @@
   body {
     color: white;
     background-color: rgb(32, 2, 56);
-    font: 600 1.4rem arial;
+    font: 600 1.3rem arial;
   }
 
   h1 {
@@ -42,13 +43,97 @@
     color: white;
     text-decoration: none;
     font: 600 1.4rem arial;
+    margin-top: 2rem;
   }
 </style>
 <body>
-  <h1>Operadores aritméticos</h1>
+  <main>
+    <header>
+      <h1>Operadores aritméticos</h1>
+    </header>
+    <article class="box-js" id="dangerArithmetic">
+      <p>Cuidado ao fazer contas aritméticas,sempre siga a ordem aritmética!</p>
+      <ol type="1">
+        <li>Parênteses ( ) </li>
+        <ul type="A">
+          <li>Ex: (5 + 3) * 2 (resolve 5 + 3 primeiro)</li>
+        </ul>
+
+        <li>Expoentes **	</li>
+        <ul type="A">
+          <li>Ex: 3 ** 2 (3 2) </li>
+        </ul>
+
+        <li>Multiplicação, Divisão e Módulo	*, /, %</li>
+        <ul type="">
+          <li>Ex: 10 / 2 * 3) (da esquerda para a direita)</li>
+        </ul>
+
+        <li>Adição e Subtração +, -</li>
+        <ul type="A">
+          <li>Ex: 5 + 2 - 1 (da esquerda para a direita)</li>
+        </ul>
+
+      </ol>
+      <p>Sempre respeite a ordem de precedência!</p>
+      <p>Ex:</p>
+      <img src="../assets/conta.PNG" alt="">
+      <div class="box-js" id="atribuiçãoSimples">
+        <h3>Atribuição simples</h3>
+        <ol>
+          <li><span>var <small>a</small> =</span> 5 + 3</li>
+          <ul>
+            <li>= 8</li>
+          </ul>
+          <li><span>var <small>b</small> = </span> a % 5</li>
+          <ul>
+            <li>= 3</li>
+          </ul>
+          <li><span>var <small>c</small> = </span> 5 * <strong>b ** 2</strong></li>
+          <ul>
+            <li>= 45</li>
+          </ul>
+          <li><span>var <small>d</small> = </span>10 - <strong>a / 2</strong></li>
+          <ul>
+            <li>= 6</li>
+          </ul>
+          <li><span>var <small>e</small> =</span> <strong>6 * 2</strong> / d</li>
+          <ul>
+            <li>= 2</li>
+          </ul>
+          <li><span>var <small>f</small> =</span> <strong>b % e</strong> + <strong>4 / e</strong></li>
+          <ul>
+            <li>= 3</li>
+          </ul>
+        </ol>
+      </div>
+      <div class="box-js" id="autoAtribuições">
+        <h3>Auto atribuições</h3>
+        <p>Em termos simples, autoatribuição em JavaScript é quando você usa o valor atual de uma variável para calcular e definir o seu novo valor.</p>
+        <p>Pense assim: se você tem uma variável e quer atualizá-la com base no que ela já contém, você poderia fazer:</p>
+        <span>variavel=variavel+valor;</span>
+        <p>A autoatribuição permite que você escreva isso de uma forma muito mais curta.</p>
+        <ol type="1">
+          <li>var pontos = 10</li>
+          <li>pontos = pontos + 5</li>
+          <ul>
+            <li>pontos agora é 15</li>
+          </ul>
+          <li>pontos += 5</li>
+          <ul>
+             <li>pontos agora é 20 (15 + 5)</li>
+          </ul>
+        </ol>
+      </div>
+    </article>
+
+
+
   <a href="../index.html">
     <span>Voltar</span>
   </a>
+  </main>
+ 
   <script>
   </script>
 </body>
