@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If & else</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    color: white;
+    background-color: rgb(32, 2, 56);
+    font: 600 1rem arial;
+  }
+
+  *,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+
+    h1 {
+      text-align: center;
+      margin: 2.4rem;
+    }
+    
+    a {
+      margin-top:2rem;
+      position: fixed;
+      display: flex;
+      justify-self: center;
+      bottom: 0;
+      background-color: rgb(83, 13, 139);
+      width: fit-content;
+      padding: 1.4rem;
+      border-radius: 1rem;
+      position: relative;
+      transform: translate(300px 300px);
+      transition: background-color 750ms;
+      color: white;
+      text-decoration: none;
+      font: 600 1.4rem arial;
+  
+      &:hover {
+        background-color: rgb(104, 26, 168);
+      }
+    }
+
+    & .If {
+      background: linear-gradient(to top,rgb(1, 92, 1),green);
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 3rem;
+      & h2 {
+        margin-block: 1rem 1.5rem;
+      }
+      & ul {
+        list-style-type: none;
+        display: grid;
+        gap: 1rem;
+
+        & li:last-child{
+          font: 500 1.7rem "Inter",sans-serif;
+          margin-block: 1rem;
+          text-align: center;
+          background-color: green;
+          border-radius: 0.7rem;
+          padding: 1rem 0.6rem;
+          
+          & strong {
+            font: 600 1.7rem "Inter",sans-serif;
+            background: linear-gradient(to top,rgb(1, 83, 1),rgb(0, 156, 0));
+            border-radius: 0.7rem;
+            padding: 0.1rem 0.5rem 0.3rem;
+          }
+        }
+      }
+    }
+
+    & .else{
+      background: linear-gradient(to top,rgb(110, 81, 3),rgb(121, 121, 1));
+      padding: 1rem;
+      border-radius: 1rem;
+      & h2 {
+        margin-block: 1rem 1.5rem;
+      }
+      & ul {
+        list-style-type: none;
+        display: grid;
+        gap: 1rem;
+
+        & li:last-child{
+          font: 500 1.7rem "Inter",sans-serif;
+          margin-block: 1rem;
+          text-align: center;
+          background-color: rgb(128, 126, 0);
+          border-radius: 0.7rem;
+          padding: 1rem 0.6rem;
+          
+          & strong {
+            font: 600 1.7rem "Inter",sans-serif;
+             background: linear-gradient(to top,rgb(110, 81, 3),rgb(167, 167, 2));
+            border-radius: 0.7rem;
+            padding: 0.1rem 0.5rem 0.3rem;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media (width >= 43.75rem){
+
+    & body {
+      font: 600 1.4rem arial;
+    }
+    main {
+      max-width: 43.75rem;
+      width: 100%;
+      & .If {
+        padding: 2rem;
+      }
+    }
+  }
+</style>
+<body>
+  <main>
+    <header>
+      <h1>
+        If e else
+      </h1>
+    </header>
+    <div class="If">
+      <h2>
+        Exemplos de If:
+      </h2>
+      <ul>
+        <li><code>var vel = 70</code></li>
+        <li><code>console.log(`A velocidade do seu carro é de ${vel}Km/h`)</code></li>
+        <li><code>if (vel > 60) { </code>// Condição simples</li>
+        <li><code>  console.log(`Você ultrapassou o limite de velocidade. Multado`)</code></li>
+        <li><code>}</code></li>
+        <li><code>console.log(`Dirija sempre usando cinto de segurança!`)</code></li>
+        <li>Usar extensão code Runner <strong>+</strong> CTRL + ALT + N</li>
+      </ul>
+    </div>
+    
+    <div class="else">
+      <h2>
+        Exemplos de else:
+      </h2>
+      <ul>
+        <li><code>var pais = 'Brasil'</code></li>
+        <li><code>console.log(`Vivendo em ${pais}`)</code></li>
+        <li><code>if (pais == 'Brasil' || pais == 'brasil' || pais == 'brazil' || pais == 'Brazil') {</code></li>
+        <li><code>console.log('Brasileiro')</code></li>
+        <li><code>} else {</code></li>
+        <li><code>console.log('Estrangeiro')</code></li>
+        <li><code>}</code></li>
+        <li>Usar extensão code Runner <strong>+</strong> CTRL + ALT + N</li>
+      </ul>
+
+      
+      <h3>"Pais" for diferente</h3>
+     <ul>
+        <li><code>var pais = 'UK'</code></li>
+        <li><code>console.log(`Vivendo em ${pais}`)</code></li>
+        <li><code>if (pais != 'Brasil' && pais != 'brasil' && pais != 'brazil' && pais != 'Brazil') {</code></li>
+        <li><code>  console.log('Você é Estrangeiro')</code></li>
+        <li><code>} else {</code></li>
+        <li><code>  console.log('Você é Brasileiro')</code></li>
+        <li><code>}</code></li>
+        <li>Usar extensão code Runner <strong>+</strong> CTRL + ALT + N</li>
+        <li>&& necessite que todos sejam diferentes,nesse caso se um for igual ao "pais" então será Brasileiro,se todos forem diferente da variável pais então será diferente</li>
+      </ul>
+    </div>
+    <a href="../index.html">
+      <span>Voltar</span>
+    </a>
+  </main>
+  
+</body>
+</html>

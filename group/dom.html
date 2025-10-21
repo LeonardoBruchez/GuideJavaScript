@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Var,Let e Const</title>
+  <link rel="stylesheet" href="../styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  *,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root{
+    --font1rem400:400 1rem "Inter",sans-serif;
+    --font1rem500:500 1rem "Inter",sans-serif;
+    --font1-3rem:500 1.3rem "Inter",sans-serif;
+    --font1-6rem700:700 1.6rem "Inter",sans-serif;
+  }
+  body {
+    color: white;
+    background: linear-gradient(to top,rgb(50, 0, 116),rgb(0, 17, 94));
+    font: var(--font1rem400);
+    margin: auto;
+    & img {
+      max-width: 350px;
+    }
+  }
+
+  main {
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(to top,rgb(50, 0, 116),rgb(0, 17, 94));
+    border: 2px solid rgb(0, 4, 255);
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    h1 {
+      text-align: center;
+      font:var(--font1-6rem700);
+      margin-block: 1rem;
+    }
+
+    & h3 {
+      margin: 1.5rem;
+      background-color: rgb(0, 20, 107);
+      border: 1px solid rgba(0, 0, 255, 0.397);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    & ul {
+      margin-top: 1rem;
+      list-style-type: none;
+      display: grid;
+      gap: 0.7rem;
+
+      
+    }
+
+    .sumary{
+      background-color: rgb(51, 53, 211);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      & h2 {
+        text-align: center;
+        margin-block: 1rem;
+      }
+      & ol {
+        display: grid;
+        gap: 2rerem;
+        list-style-position: inside;
+       & li {
+          & a {
+            background: none;
+            width: initial;
+            text-decoration: none;
+            justify-self: flex-start;
+            padding: 0;
+            display: initial;
+          }
+        }
+      }
+    }
+    
+    & .variavelP2{
+      color: rgb(152, 205, 252);
+      text-align: center;
+      padding-block: 0.5rem;
+      border-radius: 0.5rem;
+      margin-block: 1rem;
+      display: grid;
+      background-color: rgb(66, 0, 128);
+    }
+
+    & .windowAlert{
+      background-color: rgb(35, 4, 107);
+      padding-top: 1rem;
+      border-radius: 1rem;
+      margin-block: 2rem;
+      &> ul:nth-child(2) {
+        background-color: rgb(35, 4, 107);
+        text-align: center;
+        border-radius: 0.4rem;
+        padding-block: 1rem;
+        
+
+        & li:nth-child(2),li:nth-child(4){
+          margin-bottom: 1rem;
+        }
+      }
+
+      &> ul:nth-child(3) {
+        background-color: rgb(35, 4, 107);
+        border-radius: 1rem;
+        & li {
+          margin: 1.5rem;
+          background-color: rgb(66, 0, 128);
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          font: var(--font1rem500);
+        }
+
+        &> li:first-child{
+          font: var(--font1-3rem);
+          background-color:   rgb(35, 4, 107);
+        }
+
+        & p {
+          text-align: center;
+        }
+
+        & img {
+          display: grid;
+          justify-self: center;
+          border-radius: 0.5rem;
+
+        }
+
+        & div {
+          background-color: rgb(23, 11, 78);
+          border-radius: 0.5rem;
+          padding-bottom: 2.3rem;
+        }
+
+        & > div:nth-child(3){
+          & li:last-child{
+            font: var(--font1-6rem700);
+            text-align: center;
+
+            background-color: rgb(23, 11, 78);
+          }
+        }
+      }
+    }
+
+    .SecondExample {
+      background-color: rgb(90, 48, 0);
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      & .ImageStructure{
+      width: 373px;
+      border-radius: 0.5rem;
+      display: grid;
+      justify-self: center;
+    }
+
+    & img + p {
+      text-align: center;
+    }
+
+    & ul {
+      & li:nth-child(2){
+        font: var(--font1-3rem);
+      }
+
+      & li:last-child{
+        margin: 1.5rem;
+        background-color: rgb(66, 0, 128);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+      }
+
+      & small {
+        font: var(--font1-3rem);
+        color: rgb(230, 218, 208);
+      }
+    }
+    }
+
+    .bgColorChange{
+
+      
+      margin-block: 1rem;
+      background-color: rgb(90, 48, 0);
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      display: grid;
+      gap: 1rem;
+      & h3 {
+      text-align: center;
+      }
+      & ul {
+        list-style-position: inside;
+      }
+    }
+
+    .writeInHTML {
+      background-color: rgb(29, 19, 124);
+      text-align: center;
+      margin-block: 1rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      & p {
+        line-height: 2.5;
+        text-align: center;
+      }
+      & small {
+        &:nth-child(1){
+          background-color: rgb(0, 83, 83);
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+        &:nth-child(2){
+          background-color: rgb(17, 53, 3);
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+        &:nth-child(3){
+          background-color: rgb(53, 52, 3);
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+        &:nth-child(4){
+          background-color: rgb(59, 0, 0);
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+
+      }
+      & strong{
+        &:nth-child(2){
+          background-color: rgb(92, 38, 3);
+          padding: 0.4rem;
+          border-radius: 0.5rem;
+        }
+      } 
+
+      & img {
+        border-radius: 1rem;
+        margin-block: 1rem;
+        width: 372px;
+        display: grid;
+        justify-self: center;
+      }
+    }
+
+    .selectingElements{
+      background-color: rgb(29, 19, 124);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    .selectingElements{
+
+      & ul {
+
+        & li:nth-child(3),& li:nth-child(6),& li:nth-child(9),& li:nth-child(12){
+          margin-bottom: 2rem;
+        }
+
+        & li {
+
+          & code {
+            background-color: rgb(38, 40, 61);
+            font-size: 0.90rem;
+            
+          }
+        }
+
+        & li:last-child{
+          padding-bottom: 3rem;
+        }
+      }
+      & h3 {
+        margin: 0;
+        width: fit-content;
+        border: none;
+        margin-block: 1rem;
+      }
+    }
+
+    .ChangeText {
+      background-color: rgb(85, 1, 12);
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      margin-block: 1rem;
+    }
+
+    .function{
+      background-color: goldenrod;    
+      border-radius: 1rem;
+      padding: 0.2rem 0.2rem 7rem 0.2rem;
+      margin-block: 1rem;
+      display: grid;
+      gap: 1rem;
+
+      & h3 {
+        text-align: center
+      }
+
+      .ColorFunction {
+        background-color: rgb(0, 47, 255);
+        width: 150px;
+        display: grid;
+        justify-self: center;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .textTest {
+        background-color: chocolate;
+        width: 150px;
+        display: grid;
+        justify-self: center;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .movement{
+        background-color: rgb(30, 210, 45);
+        width: 150px;
+        display: grid;
+        justify-self: center;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .allStyle{
+        background-color: rgb(210, 30, 30);
+        width: 150px;
+        display: grid;
+        justify-self: center;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .ShowCodes {
+        opacity: 0;
+        background-color: rgb(3, 124, 67);
+        padding: 1rem 0.4rem;
+        border-radius: 1rem;
+        font: var(--font1rem400);
+        height: 0px;
+        text-align: center;
+
+        & li:nth-child(2),li:nth-child(4),li:nth-child(6),li:nth-child(8){
+          margin-bottom: 2rem;
+        }
+
+        /* & li:nth-child(8),li:nth-child(17){
+          line-height: 1.4;
+          & strong {
+            color: greenyellow;
+            background-color: rgb(1, 105, 1);
+            border-radius: 1rem;
+            padding: 0.5rem;
+          }
+        } */
+
+        & li:nth-child(7),li:nth-child(8),li:nth-child(16),li:nth-child(17),li:nth-child(18),li:last-child{
+          text-align: initial;
+          & strong {
+            color: rgb(0, 0, 0);
+            background-color: yellow;
+            border-radius: 0.4rem;
+            padding: 0.2rem;
+          }
+        }
+
+        & li:nth-child(17){
+          & code {
+            margin-top: 2rem;
+            display: block;
+          }
+        }
+      }
+
+      .ButtonShowCodes {
+        width: fit-content;
+        cursor: pointer;
+        background-color: red;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        display: grid;
+        justify-self: center;
+      }
+    }
+
+
+  & .buttonWhite{
+    color: rgb(136, 75, 206);
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-block: 1rem;
+    display: block;
+    text-align: center;
+    transition: background-color 450ms linear,outline 750ms linear;
+
+    &:hover{
+      background-color: rgb(138, 138, 138);
+    }
+  }
+
+    
+
+    a {
+      position: fixed;
+      display: flex;
+      justify-self: center;
+      bottom: 0;
+      background-color: rgb(83, 13, 139);
+      width: fit-content;
+      padding: 1.4rem;
+      border-radius: 1rem;
+      position: relative;
+      transform: translate(300px 300px);
+      transition: background-color 750ms;
+      color: white;
+      text-decoration: none;
+      font: 600 1.4rem arial;
+  
+      &:hover {
+        background-color: rgb(104, 26, 168);
+      }
+    }
+  }
+
+
+  @media (width >= 43.75rem){
+    :root {
+    --font1rem400:400 1.4rem "Inter",sans-serif;
+    --font1rem500:500 1.2rem "Inter",sans-serif;
+    --font1-3rem:500 1.5rem "Inter",sans-serif;
+    --font1-6rem700:600 1.7rem "Inter",sans-serif;
+    }
+
+    & body {
+      max-width: 600px
+
+    }
+
+    main {
+      max-width: 43.75rem;
+      width: 100%;
+      padding: 1rem;
+
+      & .ImageStructure{
+      width: 600px;
+      display: flex;
+      justify-self: center;
+      border-radius: 0.5rem;
+      }
+
+      .writeInHTML {
+        & img {
+          width: 600px;
+          display: grid;
+          justify-self: center;
+        }
+      }
+
+      .selectingElements {
+        & ul {
+          
+          & li {
+    
+             & code {
+               background-color: rgb(38, 40, 61);
+               font-size: 1.3rem;
+               
+             }
+           }
+        }
+      }
+
+    }
+  }
+</style>
+<body>
+  <main>
+
+    <h1>
+    Aprendendo mais sobre o DOM
+    </h1>
+    <ul>
+      <li>Texto do alerta da página:</li>
+      <li>"Aprendendo a usar o <strong>DOM</strong> em JavaScrip."</li>
+    </ul>
+    <div class="sumary">
+      <h2>Sumário</h2>
+      <ol type="1"> 
+        <li><a href="#windowAlert">Colocar conteúdo HTML no alerta da pagina web</a></li>
+        <li><a href="#selectingElements">As 5 formas de selecionar um elemento HTML pelo JavaScript</a></li>
+        <li><a href="#SecondExample #selectingElements">Estilos CSS dentro do JavaScript</a></li>
+        <li><a href="#writeInHTML">mostrar a variável no documento HTML</a></li>
+        <li><a href="#ChangeText">Mudar o Texto de um Elemento HTML pelo JS</a></li>
+        <li><a href="#function">Funções / bloco</a></li>
+      </ol>
+    </div>
+    <div class="windowAlert" id="windowAlert">
+      <h3>1. Colocar conteúdo HTML no alerta da web pagina web</h3>
+      <ul>
+        <li>Selecionar o elemento:</li>
+        <li>var P39 = document.getElementById('tester')</li>
+        <li>Adicionar o elemento no alert da pagina:</li>
+        <li id="tester" name="tester"><code>window.alert(P39.textContent)</code></li>
+        <li><code>window.alert</code> serve para alertar algo na página web</li>
+        <li><code>p1</code> é a variável criada</li>
+        <li><code>textContent</code>: mostra o texto no alerta da página,mas existem varias formas além do textContent para mostrar os elementos,veja a seguir:</li>
+      </ul> 
+      <ul>
+        <li>As três formas de inserir o conteúdo JavaScript no HTML são:</li>
+        <div>
+          <li>O <strong>innerHTML</strong> mostra as tags junto com o texto dentro do HTML. É a forma menos segura,pode abrir a porta para ataques XSS (injeção de código).</li>
+          <li>As tags aparecem junto no alerta</li>
+          <li><code>window.alert(`</code>Texto para o alerta <code>`+ li.innerHTML)</code></li>
+          <img src="../assets/innerHTML.PNG" alt="">
+        </div>
+        <div>
+          <li>O <strong>textContent</strong> mostra apenas o texto. Ele ignora qualquer tag HTML que você forneça. Por isso, é a opção mais segura</li>
+          <li>As tags não aparecem no alerta,apenas o texto,e ele mostra todos os textos,até mesmo os textos ocultos.</li>
+          <li><code>window.alert(`</code>Texto para o alerta<code>`+ li.textContent)</code></li>
+          <img src="../assets/textcontent.PNG" alt="">
+          <li><strong>TextContent É o mais seguro contra ataques XSS!!</strong></li>
+        </div>
+        <div>
+          <li><strong>innerText</strong>,parecido com textContent, mostra apenas o texto, mas ele verifica se o texto está visível ou escondido pelo CSS. por isso costuma ser mais lento; o textContent é o padrão para segurança e performance.</li>
+          <li>As tags não aparecem no alerta,mas ele lhe dá apenas o que está visível na tela que o Usuario vê.</li>
+          <li><code>window.alert(`</code>Texto para o alerta <code>`+ li.innerText)</code></li>
+          <img src="../assets/innertext.PNG" alt="">
+        </div>
+      </ul>
+      
+    </div>
+
+    <div class="selectingElements">
+      <h3><strong>2. As 5 formas de selecionar um elemento HTML pelo JavaScript</strong></h3> 
+      
+      <ul>
+        <li>Por marca</li>
+        <li>getElementsByTagName('')[ ]</li>
+        <li>Ex: <code>var P20 = document.getElementsByTagName('Li')[29]</code>.
+
+        </li>
+        <li>Por id:</li>
+        <li id="SecondLi">getElementById('')</li>
+        <li>Ex: <code>var P7 = document.getElementById('SelectingId')</code></li>
+        <li>Por nome:</li>
+        <li name="fiveLi">getElementsByName('')[ ]</li>
+        <li>Ex: <code>var SixLi = document.getElementsByName('SixLi')[0]</code></li>
+        <li>Por classe</li>
+        <li class="sevenLi">getElementsByClassName('')[ ]</li>
+        <li>Ex: <code>var sevenLi = document.getElementsByClassName('sevenLi')[0]</code></li>
+        <h3>A melhor forma:</h3>
+        <li>Por seletor</li>
+        <li id="QuerySelectorLearn"></li>
+        <li>Ex: <code>var LastLiSelector = document.querySelector('#LastLiSelector')</code></li>
+      </ul>
+    </div>
+
+    <div class="SecondExample" id="SecondExample">
+      <h3>3. Estilos CSS dentro do JavaScript</h3>
+      <p>A cor deste elemento foi alterada pelo JS</p>
+      <ul>
+        <li><strong>Para alterar a cor de texto:</strong> <small>variável.style.color = 'color'</small></li>
+        <li>Ex:</li>
+        <li>p2.style.color = 'red'</li>
+      </ul>
+      <div class="bgColorChange">
+        <h3>Alterar a cor do background</h3>
+        <p><code>corpo.style.background = 'green'</code></p>
+      </div>
+    </div>
+
+
+    <div class="writeInHTML" id="writeInHTML">
+      <h3>4. Mostrar a variável no documento HTML</h3>
+      <p><small>document.write</small><small>(p1</small><small>.innerText)</small></p>
+      <p>É possível escrever um texto para aparecer junto da variável:</p>
+      <p><small><code>document.write('Texto escrito' + p1.innertext)</code></small></p>
+      <img src="../assets/selectingInnerText.PNG" alt="">
+    </div>
+
+
+    <div class="ChangeText" id="ChangeText">
+      <h3>5. Mudar o Texto de um Elemento HTML pelo JS</h3>
+      <ul>
+        <li>Criar a variável e selecionar o elemento:</li>
+        <li><code>var buttonBack = document.getElementById('buttonBack');</code></li>
+        <li><code>buttonBack.innerText = </code>'Voltar para a página anterior';</li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div class="function" id="function">
+      <h3>6. Function JS</h3>
+
+      <div class="ColorFunction" id="ColorFunction">
+        <p>Clique aqui para mudar a cor</p>
+      </div>
+      
+      <div class="textTest" id="textTest">
+        <p>Clique para mostrar seu nome!</p>
+      </div>
+
+      <div class="movement" id="movement">
+        <p>Clique para mover</p>
+      </div>
+
+      <div class="allStyle" id="allStyle">
+        <p>Aproxime para mudar tudo</p>
+      </div>
+      <div>
+        <p id="ButtonShowCodes" class="ButtonShowCodes">Ver Explicações</p>
+        
+        <ul id="ShowCodes" class="ShowCodes">
+          <li><code>var ChangeStyle = document.getElementById('allStyle')</code></li>
+          <li>seleciona o elemento</li>
+          <li><code>allStyle.addEventListener('click', AllstyleGroup)</code></li>
+          <li>addEventListener fica "escutando" a variável allStyle, nesse caso se houver um click do mouse no elemento ele irá executar/enviar o AllstyleGroup.</li>
+          <li><code>allStyle.addEventListener('mouseleave', AllstyleGroupOut)</code></li>
+          <li>Fica escutando a variável allStyle igual ao evento anterior ,porém nesse caso se o mouse sair da área do elemento ele irá ser executado,ao invés do click.</li>
+          <li><code>function AllstyleGroup()<strong>{</strong></code></li>
+          <li><strong>Escopo de função ('function')</strong> ,tudo que for criado ou executado nele fica dentro,por exemplo,se criar uma variável dentro,ela funcionará apenas dentro dele.</li>
+          <li>Estilos da função:</li>
+          <li><code> ChangeStyle.innerText = `Seu nome é ${AlertText},muito prazer!`</code></li>
+          <li><code>ChangeStyle.style.background = 'Purple'</code></li>
+          <li><code>ChangeStyle.style.transform = 'translateX(50px)'</code></li>
+          <li><code>ChangeStyle.style.transform = 'transform 2s'</code></li>
+          <li><code>ChangeStyle.style.width = '150px'</code></li>
+          <li><code>ChangeStyle.style.height = '113px'</code></li>
+          <li><code><strong>}</strong></code></li>
+          <li><code>function AllstyleGroupOut()<strong>{</strong></code></li>
+          <li><strong>Escopo de função ('function')</strong></li>
+          <li><code>ChangeStyle.textContent = 'Aproxime para mudar tudo'</code></li>
+          <li><code>ChangeStyle.style.transform = 'translateX(0px)'</code></li>
+          <li><code>ChangeStyle.style.transition = 'transform 2s'</code></li>
+          <li><code>ChangeStyle.style.background = 'red'</code></li>
+          <li><code> <strong>}</strong></code></li>
+        </ul>
+      </div>
+
+      <div class="ExamplesFunction">
+        <h3>Exemplos de function</h3>
+      </div>
+
+
+    </div>
+    <a href="../index.html">
+      <span id="buttonBack">Voltar</span>
+    </a>
+  </main>
+  <script >
+    var p1 = document.getElementsByTagName('p')[3]
+    var p2 = document.getElementsByTagName('p')[0]
+    var li = document.getElementsByTagName('li')[1]
+
+    var buttonBack = document.getElementById('buttonBack')
+    var SecondLi = document.getElementById('SecondLi')
+    var sevenLi = document.getElementsByClassName('sevenLi')[0]
+    var fiveLi = document.getElementsByName('fiveLi')[0]
+    var QuerySelectorLearn = document.querySelector('li#QuerySelectorLearn')
+    var TagNameSelector = document.getElementsByTagName('Li')[29]
+    
+
+    // var corpo = window.document.body
+    // corpo.style.background = 'green'
+    // document.write(p1.innerHTML)
+
+    document.write('Texto sendo mostrado pelo JS:  ' + p1.innerText)
+   
+    // window.alert(`Texto para o alerta `+ li.innerText)
+    // window.alert(`Texto para o alerta `+ li.innerHTML)
+    // window.alert(`Texto para o alerta `+ li.textContent)
+
+    // TREINANDO JAVA SCRIPT Styles
+    p2.style.color = 'blueviolet'
+
+    // Id getElementById
+    SecondLi.style.background = 'rgb(83, 13, 139)'
+    SecondLi.style.borderRadius = '1REM'
+    SecondLi.style.padding = '1REM'
+    SecondLi.style.width = 'Fit-content'
+
+    // name getElementsByName
+    fiveLi.style.padding = '1REM'
+    fiveLi.style.background = 'rgb(83, 13, 139)'
+    fiveLi.style.borderRadius = '1REM'
+    fiveLi.style.width = 'fit-content'
+
+    // class getElementsByClassName
+    sevenLi.style.background = 'rgb(83, 13, 139)'
+    sevenLi.style.borderRadius = '1REM'
+    sevenLi.style.padding = '1REM'
+    sevenLi.style.width = 'Fit-content'
+
+    
+    // QuerySelector 
+    QuerySelectorLearn.innerText = "querySelector('li#QuerySelectorLearn')"
+    QuerySelectorLearn.style.background = 'rgb(83, 13, 139)'
+    QuerySelectorLearn.style.padding = '1rem'
+    QuerySelectorLearn.style.borderRadius = '1Rem'
+    QuerySelectorLearn.style.width = 'fit-content'
+    
+    //getElementsByTagName
+    TagNameSelector.style.background = 'rgb(83, 13, 139)'
+    TagNameSelector.style.padding = '1Rem'
+    TagNameSelector.style.borderRadius = '1rem'
+    TagNameSelector.style.width = 'Fit-content'
+    
+    buttonBack.innerText = 'Voltar para a página anterior'
+
+
+    // Function
+
+    var ChangeColor = document.getElementById('ColorFunction')
+    ChangeColor.addEventListener('click',groupColor)
+    ChangeColor.addEventListener('mouseout',groupColorOut)
+
+    function groupColor() {
+      ChangeColor.style.background = 'red' 
+    }
+
+    function groupColorOut() {
+      ChangeColor.style.background = 'rgb(0, 47, 255)'
+    }
+
+    
+    
+    var AlertText = prompt("Digite seu nome")
+
+    var NewName = document.querySelector('div#textTest')
+    NewName.addEventListener('click',clickName)
+    NewName.addEventListener('mouseout',clickNameOut)
+
+    function clickName(){
+      NewName.innerText = `Olá ${AlertText},muito prazer!`
+      NewName.style.width = '150px'
+      NewName.style.height = '140px'
+    }
+    
+    function clickNameOut(){
+      NewName.textContent = 'Clique para mostrar seu nome!'
+      NewName.style.width = '150px'
+    }
+    
+
+
+    var movement = document.querySelector('div#movement')
+    movement.addEventListener('click',movementGroup)
+    movement.addEventListener('mouseleave',movementGroupOut)
+
+    function movementGroup(){
+      movement.style.transform = 'translateX(150px)'
+      movement.style.transition = 'transform 2s'
+    }
+
+    function movementGroupOut(){
+      movement.style.transform = 'translateX(0px)'
+      movement.style.transition = 'transform 2s'
+    }
+
+
+    var ChangeStyle = document.getElementById('allStyle')
+    allStyle.addEventListener('click', AllstyleGroup)
+    allStyle.addEventListener('mouseleave', AllstyleGroupOut)
+
+    function AllstyleGroup(){
+      ChangeStyle.innerText = `Seu nome é ${AlertText},muito prazer!`
+      ChangeStyle.style.background = 'Purple'
+      ChangeStyle.style.transform = 'translateX(50px)'
+      ChangeStyle.style.transform = 'transform 2s'
+      ChangeStyle.style.width = '150px'
+      ChangeStyle.style.height = '113px'
+    }
+
+    function AllstyleGroupOut(){
+      ChangeStyle.textContent = 'Aproxime para mudar tudo'
+      ChangeStyle.style.transform = 'translateX(0px)'
+      ChangeStyle.style.transition = 'transform 2s'
+      ChangeStyle.style.background = 'red'
+    }
+
+
+    var ButtonShowList = document.querySelector('p#ButtonShowCodes')
+    var ShowList = document.querySelector('ul#ShowCodes')
+
+    let clickCount = 0;
+
+    ButtonShowList.addEventListener ('click',ActivedList)
+
+    function ActivedList(){
+
+      clickCount++
+      if (clickCount % 2 !== 0){
+        ShowList.style.opacity = '1'
+        ShowList.style.opacity = 'block'
+        ShowList.style.height = '1550px'
+      }else {
+         ShowList.style.opacity = '0'
+         ShowList.style.height = '0px'
+      }
+    }
+
+
+
+    // var P39 = document.getElementById('tester')
+    // window.alert(P39.innerText)
+    
+
+
+    
+
+
+  </script>
+  
+</body>
+</html>

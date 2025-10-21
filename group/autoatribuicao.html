@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Var,Let e Const</title>
+  <link rel="stylesheet" href="../styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    color: white;
+    background-color: rgb(32, 2, 56);
+    font: 600 1.4rem arial;
+  }
+
+  main {
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+    & .operator {
+      font: var(--font1rem);
+      & small {
+        color: rgba(255, 255, 255, 0.466);
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    position: fixed;
+    display: flex;
+    justify-self: center;
+    bottom: 0;
+    background-color: rgb(83, 13, 139);
+    width: fit-content;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    position: relative;
+    transform: translate(300px 300px);
+    transition: background-color 750ms;
+
+    &:hover {
+      background-color: rgb(104, 26, 168);
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font: 600 1.4rem arial;
+  }
+
+  @media (width >= 43.75rem){
+    main {
+      max-width: 43.75rem;
+      width: 100%;
+    }
+  }
+</style>
+<body>
+  <main>
+    <header>
+      <h1>Auto atribuição</h1>
+    </header>
+    <div class="operator">
+      <h3>Soma (+=)</h3>
+      <ul>
+        <li>let total = 100;</li>
+        <li>total += 50; <small>O atalho para: total = total + 50;</small></li>
+        <li>console.log(total); <small>// Resultado: 150</small></li>
+      </ul>
+      <p>Se você estiver trabalhando com strings, o += faz a concatenação (junção) da mesma forma:</p>
+      <ul>
+        <li>let nomeCompleto = "João";</li>
+        <li>nomeCompleto += " Silva";</li>
+        <li>console.log(nomeCompleto); // Resultado: "João Silva"</li>
+      </ul>
+    </div>
+
+    <div class="operator">
+      <h3>Subtração (-=)</h3>
+      <ul>
+        <li>let vidas = 3;</li>
+        <li>let penalidade = 1;</li>
+        <li>vidas -= penalidade;</li>
+        <li>console.log(vidas);<small> // Resultado: 2</small></li>
+      </ul>
+    </div>
+
+    <div class="operator ">
+      <h3>Multiplicação e Divisão (*= e /=)</h3>
+      <ul>
+        <li>preço *= 1.1; <small>// Aumenta o preço em 10% (multiplica por 1.1)</small></li>
+        <li>let tamanhoFonte = 16;</li>
+        <li>tamanhoFonte /= 2; <small>// Reduz o tamanho da fonte pela metade</small></li>
+        <li>console.log(tamanhoFonte); <small>// Resultado: 8</small></li>
+      </ul>
+    </div>
+    <p>A auto atribuição é uma excelente prática em JavaScript porque torna o código mais limpo, curto e fácil de ler em situações onde a reatribuição é necessária.</p>
+    <a href="../index.html">
+      <span>Voltar</span>
+    </a>
+  </main>
+  
+</body>
+</html>

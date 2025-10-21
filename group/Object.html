@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+  <link rel="stylesheet" href="../styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    color: white;
+    background-color: rgb(32, 2, 56);
+    font: 600 1.4rem arial;
+  }
+
+  main {
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(50, 60, 205);
+    padding: 0.7rem;
+    border-radius: 1rem;
+
+    h1 {
+      text-align: center;
+    }
+    
+    a {
+      position: fixed;
+      display: flex;
+      justify-self: center;
+      bottom: 0;
+      background-color: rgb(83, 13, 139);
+      width: fit-content;
+      padding: 1.4rem;
+      border-radius: 1rem;
+      position: relative;
+      transform: translate(300px 300px);
+      transition: background-color 750ms;
+      color: white;
+      text-decoration: none;
+      font: 600 1.4rem arial;
+  
+      &:hover {
+        background-color: rgb(104, 26, 168);
+      }
+    }
+
+    & p {
+      background-color: darkorchid;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    & .objFirstExample{
+      &> li:nth-child(1){
+        background-color: rgb(42, 157, 165);
+        padding:1rem;
+        border-radius: 0.4rem;
+        margin-block: 1rem 2rem;
+        & ul {
+          display: grid;
+          gap: 0.5rem;
+        }
+      }
+      & > li:nth-child(2){
+        background-color: rgb(21, 6, 88);
+        padding: 1rem;
+        border-radius: 0.4rem;
+
+        & ul {
+          display: grid;
+          gap: 1rem;
+          list-style: disc;
+          list-style-position: inside;
+          & li:nth-child(2),& li:nth-child(3),& li:nth-child(4),& .ObjFirstExLast {
+            background-color: rgb(6, 51, 148);
+            border-radius: 0.4rem;
+            padding: 0.4rem;
+          }
+        }
+      }
+
+      & > li:nth-child(3){
+        margin-block: 1.5rem;
+        background-color: rgb(21, 34, 153);
+        padding: 0.4rem;
+        border-radius: 0.4rem;
+      }
+
+      & .ObjFirstExLast{
+        background-color: rgb(6, 51, 148);
+        border-radius: 0.4rem;
+        padding: 0.4rem;
+      }
+    }
+
+    & > ul {
+      display: grid;
+      gap: 2rem;
+      & small {
+        font: var(--font1rem);
+      }
+      & li{
+        & strong {
+          font: var(--font1-5rem);
+          text-align: center;
+          display: block;
+          margin-block: 1rem;
+        }
+      }
+
+
+      & > li:first-child{
+        font: var(--font1rem);
+        max-width: 350px;
+        background-color: blue;
+        padding: 0.5rem;
+        border-radius: 0.4rem;
+      }
+
+      & > li:nth-child(2){
+        max-width: 350px;
+        background-color: blue;
+        padding: 0.5rem;
+        border-radius: 0.4rem;
+        & ul:nth-child(2) {
+          & li:nth-child(even){}
+          & li:nth-child(7),li:last-child{
+            margin-bottom: 1rem;
+          }
+        }
+
+        & ul:nth-child(3){
+          & li:first-child{
+            text-align: center;
+          }
+        }
+      }
+
+      & .praticExampleObj{
+        max-width: 350px;
+        width: 100%;
+        font: var(--font1rem);
+        background-color: rgb(167, 84, 6);
+        border-radius: 0.4rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        color: white;
+        width: fit-content;
+        display: grid;
+        justify-self: center;
+      }
+
+      & .propertyObjetcs{
+        max-width: 350px;
+        font: var(--font1rem);
+        display: grid;
+        gap: 1rem;
+        &>li:nth-child(1){
+          background-color: rgb(6, 167, 67);
+          border-radius: 0.4rem;
+          margin-bottom: 1rem;
+          padding-block: 0.4rem;
+          color: white;
+        }
+
+        &>li:nth-child(2){
+          background-color: rgb(6, 81, 167);
+          border-radius: 0.4rem;
+          margin-bottom: 1rem;
+          padding-block: 0.4rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+
+  @media (width >= 43.75rem){
+    main {
+      max-width: 43.75rem;
+      width: 100%;
+
+      & > ul {
+        & > li:first-child{
+          max-width: 43.75rem;
+          background-color: blue;
+          padding: 0.5rem;
+          border-radius: 1rem;
+        } 
+
+        & > li:nth-child(2),& .praticExampleObj,& .propertyObjetcs{
+          max-width: 43.75rem;
+        }
+      }
+
+    }
+  }
+</style>
+<body>
+  <main>
+    <ul>
+      <li>
+        <strong>Exemplo 1:</strong>
+        <ul class="objFirstExample">
+          <li>
+            <ul>
+              <li> Imagine uma locadora com vários carros, mas independente do carro, sempre terão várias características em comum.</li>
+              <li>Podemos criar um objeto "Carro" e dentro desse objeto podemos definir as suas características.</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Características (Propriedades): modelo, ano de fabricação, cor, número de portas, etc.</li>
+              <li>Podemos criar valores para essas propriedades, por exemplo, propriedade cor recebe Preto, número de portas recebe o valor de 4,ano de fabricação recebe o valor de 2015</li>
+              <li>Definimos o objeto Carro e suas propriedades (cor, modelo, número de portas, etc.), e então cada carro terá os valores dessas propriedades.</li>
+              <li>As propriedades de cada carro são as mesmas,mas os valores de cada carro são diferentes.</li>
+            </ul>
+          </li>
+          <li>Relação: Objeto > Propriedade > Valor (Exemplo: Carro > cor > azul)</li>
+          <li class="ObjFirstExLast">
+            <ul>
+              <li>Além das propriedades, o objeto pode ter métodos(comportamentos).</li>
+              <li>Por exemplo, o carro pode: desligar, ligar, frear, acelerar, etc.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Exemplo prático:</strong>
+        <ul class="praticExampleObj">
+          <li><small>const user</small>7 = {</li>
+          <li>email: "Leonardo.bruchez@email.com",</li>
+          <li>age: 19,</li>
+          <li>name: {</li>
+          <li>firstName: "Leonardo",</li>
+          <li>surname: "Cassiano",</li>
+          <li>},</li>
+          <li>address:{</li>
+          <li>street: "Rua X",</li>
+          <li>number: 23,</li>
+          <li>city: "São Paulo",</li>
+          <li>postal_code: "12345-123"</li>
+          <li>},</li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Acessando propriedade de objetos.</strong>
+            <ul class="propertyObjetcs">
+              <li>
+                <ul>
+                  <li>Selecionar o email do objeto no console:</li>
+                  <li>console.log(user.email)</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>Selecionar o postal_code do objeto:</li>
+                  <li>console.log(user.address.postal_code)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <a href="../index.html">
+        <span>Voltar</span>
+    </a>
+  </main>
+</body>
+</html>

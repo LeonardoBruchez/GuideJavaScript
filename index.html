@@ -12,31 +12,40 @@
 <body>
   <main>
     <header>
-      <h1>
-        My room study
-      </h1>
     </header>
 
     <article id="java-script">
+      <h1>My room study </h1>
+      
       <div  class="titleJS">
-        <h2>
-          Java Script
-        </h2>
+        <p>Java Script</p>
         <img src="assets/JavaScript-logo.png" alt="">
       </div>
+      
+      <button type="submit" id="showSumary">Ver sumário</button>
 
-      <section id="sumary">
+      <section id="sumary" class="hiden">
         <h3>Sumário</h3>
         <ol type="1">
           <li><a href="#addScript">Como adicionar o script js no HTML?</a></li>
-          <li><a href="#variables">Variáveis</a></li>
+          <li><a href="#variableDeclarations">Var,Let e Const,qual usar?</a></li>
+          <li><a href="#CamelSnakeCase">Camel Case e Snake Case</a></li>
           <li><a href="#numberAndString">Number e string</a></li>
-          <li><a href="#ValueConversion">Conversão de number para string e string para number</a></li>
-          <li><a href="#templateLiterals">(templateLiterals)</a></li>
-          <li><a href="#converter">Mostrar segundo número após a virgula</a></li>
+          <li><a href="#ValueConversion">Convertendo string to number</a></li>
+          <li><a href="#templateLiterals">templateLiterals ${ }</a></li>
+          <li><a href="#converter">Duas casas decimais</a></li>
           <li><a href="#transformPoint">Transformar numero com " . " para " , "</a></li>
           <li><a href="#converterCoin">Conversão de número (Real,Dólar e Euro)</a></li>
-          <li><a href="#ArithmeticOperators">Operadores aritméticos</a></li>
+          <li><a href="#ArithmeticOperators">Operadores aritméticos (5+2=7)</a></li>
+          <li><a href="#autoAssignment">Auto atribuição +=</a></li>
+          <li><a href="#increment">Incremento ++</a></li>
+          <li><a href="#relational">Relacionais (Comparação &gt; &lt; </a></li>
+          <li><a href="#logics">Logicos (! && ||)</a></li>
+          <li><a href="#ternary">Ternário</a></li>
+          <li><a href="#DOM">Document Object Model (DOM)</a></li>
+          <li><a href="#conditions">Condições (IF & else)</a></li>
+          <li><a href="#regex">Expressão Regular (ou Regex) /\D+/g</a></li>
+          <li><a href="#object">Objetos</a></li>
         </ul>
       </section>
 
@@ -48,22 +57,48 @@
         <img src="assets/script-print.PNG" alt="">
       </section>
 
-      <section class="box-js" id="variables">
-        <h3>2. Variáveis</h3>
-        <p>Uma variável é um contêiner (ou rótulo) que armazena dados (como números ou texto) na memória do computador, permitindo que você os use e modifique no seu código.</p>
-        <img src="assets/variavel.PNG" alt="">
-        <p>'marca' e 'Número' são as variáveis presentes.</p>
+      <section class="box-js" id="variableDeclarations">
+        <h3>2. Var,Let e Const</h3>
+        <p>Qual usar?</p>
+        <ul>
+          <li>No JavaScript moderno, a prática recomendada para evitar bugs e ter um código mais claro é abandonar o var e seguir esta regra</li>
+          <li>Use const por padrão para tudo.</li>
+          <li>Use let apenas se você souber que precisará reatribuir o valor da variável (ex: contadores em loops for, ou variáveis que rastreiam estados).</li>
+        </ul>
+        <a href="group/variables.html" class="buttonWhite">Aprender mais sobre</a>
+      </section>
+
+      <section class="box-js" id="CamelSnakeCase">
+         <div class="stylesName">
+           <h2>3. Nomear variáveis compostas</h2>
+           <div id="stylesName-Wrapper">
+             <h3>Snake Case (ou snake_case)</h3>
+             <ul>
+               <li>No Snake Case, as palavras são separadas por sublinhados ($\_$).</li>
+               <li>Exemplo: minha_variavel_longa</li>
+               <li>É muito comum em linguagens como Python e Ruby.</li>
+               <li>É frequentemente usado para nomes de variáveis, funções e arquivos.</li>
+               <li>É considerado altamente legível, pois cada palavra está claramente separada.</li>
+             </ul>
+             <h3>Camel Case (ou camelCase)</h3>
+             <ul>
+               <li>No Camel Case, a primeira palavra começa com letra minúscula e as palavras subsequentes começam com letra maiúscula, sem espaços ou sublinhados.</li>
+               <li>Exemplo: minhaVariavelLonga</li>
+               <li>É a convenção padrão em linguagens como JavaScript, Java e C# (para variáveis e métodos).</li>
+               <li>O nome vem da "corcova" que as letras maiúsculas formam no meio da palavra.</li>
+               <li>Em Java, ele é estritamente usado para métodos e variáveis.</li>
+             </ul>
+           </div>
+        </div>
       </section>
 
       <section class="box-js" id="numberAndString">
         <h3>
-          3. Number e string
+          4. Number e string
         </h3>
         <p><strong>String:</strong></p>
         <ul>
-          <li>Texto ou uma sequência de caracteres (letras, espaços, símbolos).</li>
           <li>Não permite cálculos matemáticos.</li>
-          <li>Ex: "Olá Mundo", "Nike"</li>
           <li>Importante: String sempre são usadas dentro de aspas simples (' ') ou duplas (" ").</li>
         </ul>
         <img src="assets/string.png" alt="">
@@ -71,19 +106,15 @@
         <div class="Line"></div>
         <p><strong>Number:</strong></p>
         <ul>
-          <li>Valores matemáticos (inteiros ou decimais).</li>
           <li>Permite cálculos (somar, subtrair, multiplicar).	</li>
-          <li>Ex: 4, 10, 3.14, -5</li>
           <li>Importante:  sempre é usada fora das aspas</li>
         </ul>
         <img src="assets/number.png" alt="">
         <p id="number-4">4 é um number.</p>
-        
       </section>
 
       <section class="box-js" id="ValueConversion">
-        <h3>4. Convertendo valores</h3>
-
+        <h3>5. Convertendo valores</h3>
         <div class="toString">
           <strong>Number para string</strong>
           <img src="assets/numeroToString.PNG" alt="">
@@ -99,7 +130,7 @@
 
 
       <section class="box-js" id="templateLiterals">
-        <h3>5. Criar variáveis e adicionar elas ao texto</h3>
+        <h3>6. Criar variáveis e adicionar elas ao texto</h3>
         <strong>(templateLiterals)</strong>
         <div>
           <span>Ex:</span>
@@ -107,12 +138,12 @@
           <img src="assets/node-templateliteralsPNG.PNG" alt="">
           <p>`O aluno ${aluno} de ${idade} anos tirou ${nota} na prova`</p>
           <p>Basta colocar a variável dentro de ${} para mencionar ela,e colocar crases `` no lugar das aspas em volta</p>
-          <span><a href="group/templateLiterals.html">Testar templateLiterals</a></span>
+          <a href="group/templateLiterals.html" class="buttonWhite">Testar templateLiterals</a>
         </div>
       </section>
 
       <section class="box-js" id="converter">
-        <h3>6. Mostrar segundo número após a virgula:</h3>
+        <h3>7. Mostrar segundo número após a virgula:</h3>
         <div>
           <img src="assets/centesimo.PNG" alt="">
           <div>
@@ -120,7 +151,7 @@
             <img src="assets/secondLether.PNG" alt="">
           </div>
         </div>
-        <h3 id="transformPoint">7. Transformar número com " . "  em " , " :</h3>
+        <h3 id="transformPoint">Transformar número com " . "  em " , " :</h3>
         <div>
           <img src="assets/pontoEmVirgula.PNG" alt="">
           <div>
@@ -144,7 +175,6 @@
             <img src="assets/resultRealToBRL.PNG" alt="">
           </div>
         </div>
-        
         <div>
           <p>Dólar USD</p>
           <div>
@@ -181,14 +211,698 @@
           <li>5 <span>%</span> 2 <span>=</span> 1</li>
           <li>5 <span>**</span> 2 <span>=</span> 25</li>
         </ul>
-        <span><a href="group/operators.html">Testar os operadores aritméticos</a></span>
-
+        <a href="group/operators.html" class="buttonWhite">Testar os operadores aritméticos</a>
       </section>
+
+      <section class="box-js" id="autoAssignment" >
+        <h3>10. Auto atribuição</h3>
+        <div id="standardFormat">
+          <h3>Formato longo(padrão)</h3>
+            <pre>Let valor = 10;</pre>
+            <pre>valor = valor + 5;</pre>
+              <p>valor + 5 soma o valor anterior mais o valor atual a ser somado</p>
+            <p>Resultado: valor é 15</p>
+        </div>
+
+        <div id="shortFormat">
+          <h3>Formato abreviado(Auto Atribuição)</h3>
+          <p>Em vez de escrever a variável duas vezes, você usa um operador de atalho (como +=, -=, *=, etc.).</p>
+            <div>
+              <span>+= </span>
+                <pre>x = x + y	</pre>
+                <p>Soma y e atribui o novo valor a x.</p>
+              <span>-=</span>
+              
+                <pre>x = x - y	</pre>
+                <p>Subtrai y e atribui o novo valor a x.</p>
+              
+              <span>*=</span>
+              
+                <pre>x = x * y	</pre>
+                <p>Multiplica por y e atribui o novo valor a x.</p>
+              
+              <span>/=</span>
+              
+                <pre>x = x / y	</pre>
+                <p>Divide por y e atribui o novo valor a x.</p>
+              
+              <span>%=</span>
+              
+                <pre>x = x % y	</pre>
+                <p>Calcula o resto da divisão por y e atribui a x</p>
+            </div>
+          <a href="group/autoatribuicao.html" class="buttonWhite">Ver exemplos</a>
+        </div>
+      </section>
+
+      <section class="box-js" id="increment"> 
+        <h2>11. Incremento</h2>
+        <h3>Como incremento funciona(++)</h3>
+        <p>O uso do operador ++ é um atalho para a operação completa de auto atribuição de soma</p>
+        <h3>Pré-incremento (++variável)</h3>
+        <pre>
+          let numero = 5;	
+        </pre>  
+          <p>
+            'numero' é incrementado para 6 ANTES
+             de ser usado no console.log
+          </p>
+        
+          <pre>console.log(++numero);</pre>
+          <p>Resultado no console: 6</p>
+        
+        <h3>Pós incremento</h3>
+        <pre>
+          let numero = 5;
+        </pre> 
+          <p>
+            'numero' é usado na operação com
+             o valor 5 PRIMEIRO, e
+             depois incrementado
+          </p>
+          <pre>console.log(numero++);  Resultado: 5</pre>
+          <p>(Somente após usar o incremento o resultado irá mudar) resultado agora: 6</p>
+            <p>
+              Somente após incrementar que ele adiciona,diferente do pré incremento que no mesmo momento em que adiciona ele já altera o valor
+            </p>
+          <p>Resultado no console: 6</p>
+        
+      </section>
+
+      <section class="box-js" id="relational">
+        <h2>12. Relacionais</h2>
+        <p>Os Operadores Relacionais (ou de Comparação) em JavaScript são usados para  comparar dois valores (operandos) e determinar a relação entre eles. </p>
+        <h3>1. Operadores de Maior, Menor, Maior ou Igual e Menor ou Igual</h3>
+        <ol>
+          <ul>
+            <li>Operador <strong>&gt;</strong> Maior que</li>
+            <li>Exemplo: <strong>5 &gt; 3</strong>	</li>
+            <li>Resultado: true</li>
+            <li>5 é maior que 3.</li>
+          </ul>
+          <ul>
+            <li>Operador <strong>&lt;</strong> Menor que</li>
+            <li>Exemplo: <strong>5 &lt; 3</strong>	</li>
+            <li>Resultado: false</li>
+            <li>5 não é menor que 3.</li>
+          </ul>
+          <ul>
+            <li>Operador<strong>&gt;=</strong> Maior ou igual a</li>
+            <li>Exemplo: <strong>5 &gt;= 5</strong>	</li>
+            <li>Resultado: true	</li>
+            <li>5 é igual a 5.</li>
+          </ul>
+          <ul>
+            <li>Operador<strong>&lt;=</strong> Menor ou igual a	</li>
+            <li><strong>3 &lt;= 5</strong></li>
+            <li>Resultado: true</li>
+            <li>3 é menor ou igual a 5.</li>
+          </ul>
+        </ol>
+        <h3>2. Operadores de Igualdade e Desigualdade</h3>
+        <div id="igualdadeNaoEstrita">
+          <p>Igualdade Não Estrita (Loose Equality)</p>
+          <ol>
+            <ul>
+              <li>Operador <strong>==</strong> Igual a</li>
+              <li>Exemplo: <strong>5 == '5'</strong>	</li>
+              <li>Resultado: true</li>
+              <li>5 é igual a '5'.</li>
+            </ul>
+            <p>Compara apenas o valor. O JavaScript converte a string '5' para o número 5 antes da comparação.</p>
+            <ul>
+              <li>Operador <strong>!=</strong> Diferente de</li>
+              <li>Exemplo: <strong>5 != '5'</strong>	</li>
+              <li>Resultado: false</li>
+              <li>5 não é diferente de '5'.</li>
+            </ul>
+            <p>Retorna o oposto de ==. Como os valores são considerados iguais após a conversão, o resultado é falso</p>
+            <h3>⚠️ Importante: O operador == tenta forçar os operandos a serem do mesmo tipo (coerção de tipo) antes de compará-los, o que pode levar a resultados inesperados. Por isso, é fortemente recomendado usar a Igualdade Estrita (===).</h3>
+          </ol>
+        </div>
+        <div id="igualdadeEstrita">
+          <p>Igualdade Estrita (Strict Equality)</p>
+          <ol>
+            <ul>
+              <li>Operador <strong>===</strong> Exatamente igual a</li>
+              <li>Exemplo: <strong>5 === '5'</strong>	</li>
+              <li>Resultado: false</li>
+              <li>5 não é exatamente igual '5'.</li>
+            </ul>
+            <p>Compara o valor e o tipo. O número 5 é de tipo number, a string '5' é de tipo string. Tipos diferentes, resultado é falso.</p>
+            <ul>
+              <li>Operador <strong>!==</strong> Exatamente diferente de</li>
+              <li>Exemplo: <strong>5 !== 5</strong>	</li>
+              <li>Resultado: true</li>
+              <li>5 é exatamente diferente '5'.</li>
+            </ul>
+            <p>Retorna o oposto de ==. Como os valores são considerados iguais após a conversão, o resultado é falso</p>
+            <p>⚠️ Importante: O operador == tenta forçar os operandos a serem do mesmo tipo (coerção de tipo) antes de compará-los, o que pode levar a resultados inesperados. Por isso, é fortemente recomendado usar a Igualdade Estrita (===).</p>
+          </ol>
+        </div>
+        <a href="group/relacionais.html" class="buttonWhite">Ver exemplos</a>
+      </section>
+
+      <section class="box-js" id="logics">
+        <h2>Lógicos</h2>
+        <div class="negation">
+          <h3>! negação</h3>
+          <p>Só tem um operando,após a exclamação coloca True,False ou uma expressão que termina em True ou False</p>
+          <p>! nega,então uma coisa ! true (é não verdadeira) = false</p>
+          <p>Ex:</p>
+          <div class="negationTrueFalse">
+            <p class="A">!</p>
+            <p class="B">true</p>
+            <img src="assets/arrowright.svg" alt="" class="C">
+            <p class="D">false</p>
+            <p class="E">false</p>
+            <img src="assets/arrowright.svg" alt="" class="F">
+            <p class="G">true</p>
+          </div>
+        </div>
+        <div class="conjunction">
+          <h3>&& Conjunção</h3>
+          <p>Tem dois operadores lógicos,um de cada lado,se ambos os lados forem true o final será true,se algum dos lados ou ambos forem false então final será falso</p>
+          <q> Preciso de um caderno e um lápis,se me trouxer apenas um lápis,ou apenas o caderno eu não vou aceitar,apenas se trouxer o lápis e o caderno </q>
+          <p>Ex:</p>
+          <div class="conjunctionTrueFalse">
+            <p>true</p>
+            <p>&&</p>
+            <p>true</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>true</p>
+            <p>true</p>
+            <p>false</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>false</p>
+            <p>false</p>
+            <p>true</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>false</p>
+            <p>false</p>
+            <p>false</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>false</p>  
+          </div>
+        </div>
+        <div class="disjunction">
+          <h3>|| Disjunção</h3>
+          <p>Tem dois operadores lógicos um de cada lado,se um ou ambos forem verdadeiros o final será verdadeiro,basta que um seja verdadeiro.</p>
+          <p>Ex:</p>
+          <div class="disjunctionTrueFalse">
+            <p>true</p>
+            <p>||</p>
+            <p>true</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>true</p>
+            <p>true</p>
+            <p>false</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>true</p>
+            <p>false</p>
+            <p>true</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>true</p>
+            <p>false</p>
+            <p>false</p>
+            <img src="assets/arrowright.svg" alt="">
+            <p>false</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-js" id="orderOfPrecedence">
+        <h3>Ordem de precedência</h3>
+        <div>
+          <img src="assets/arrowdown.svg" alt="">
+          <ul>
+            <ul>
+              <li>()</li>
+              <li>**</li>
+              <li>/</li>
+              <li>...</li>
+              <li>&gt;</li>
+              <li>&lt</li>
+              <li>&gt;=</li>
+              <li>...</li>
+            </ul>
+            <li>!</li>
+            <li>&&</li>
+            <li>||</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="box-js" id="ternary">
+        <h3>Ternário</h3>
+        <p>É composto por dois pontos dentro de uma mesma expressão,eles são: <small>?</small> <small>:</small></p>
+        <p>Se chama ternário pois ele tem três partes.</p>
+        <ul>
+          <li>Teste</li>
+          <li>?</li>
+          <li>true</li>
+          <li>:</li>
+          <li>false</li>
+        </ul>
+        <p>Exemplo prático</p>
+        <ul>
+          <li>Média >=</li>
+          <li>?</li>
+          <li>"Aprovado"</li>
+          <li>:</li>
+          <li>"Reprovado"</li>
+        </ul>
+        <p>Resultado irá ser "aprovado" ou "reprovado", depende do teste lógico (da média) do primeiro quadro.</p>
+
+        <a href="group/ternary.html" class="buttonWhite"> Ver mais exemplos</a>
+      </section>
+
+      <section class="box-js" id="DOM">
+        <h3>Document Object Model (DOM)</h3>
+        <p>Selecionar um elemento HTML pela TAG</p>
+        <img src="assets/DOMByTagName.PNG" alt="">
+        <p>Selecionando a 3º tag p "Parágrafo 3"</p>
+        <p>Nesse caso tag 
+        <ol type="1"> 
+          <li>Primeiro criamos uma variável que irá ser o nome do elemento selecionado dentro do JS.</li>
+          <li>E junto dele selecionamos o documento 'document'.</li>
+          <li>após isso usamos o elemento 'getElementsByTagName' para selecionar a tagName e colocamos a tag dentro dos parenteses ( ),e nesse caso como temos mais de um elemento 'p' utilizamos um equivalente ao nth-child do CSS para selecionar qual dos elementos p será selecionado (os colchestes [ ] ).</li>
+          <ul>
+            <li class="getElementsByTagName"><small>var p1</small> = <small>document</small>.<small>getElementsByTagName('p')</small><small>[2]</small></li>
+            <ul class="vetors">
+              <img src="assets/arrowdown.svg" alt="">
+              <li>variável</li>
+              <li><img src="assets/arrowdown.svg" alt=""></li>
+              <li>Documento</li>
+              <li><img src="assets/arrowdown.svg" alt=""></li>
+              <li>Seletor de TagName</li>
+              <li><img src="assets/arrowdown.svg" alt=""></li>
+              <li>Acesso por Posição (ou Índice)</li>
+            </ul>
+          </ul>
+        </ol>
+        <a href="group/dom.html" class="buttonWhite">Ver mais sobre o DOM</a>
+      </section>
+
+      <section class="box-js" id="conditions">
+        <h2>Condições</h2>
+        <p>As condições são o que permitem o código tomar decisões. Ela faz com que o programa execute dois caminhos dependendo se a situação é verdadeira ou falsa.</p>
+        <h3>Condição simples:</h3>
+        <p>Somente com if</p>
+        <pre>
+          if(condição){
+            true
+          }
+        </pre>
+        <h3>Condição padrão (com if &</h3>
+        <div class="if-wrapper">
+          <h3>A estrutura if</h3>
+          <ul>
+            <li>a palavra if verifica uma expressão.</li>
+            <li>se o resultado da expressão for verdadeiro(true),o código dentro das chaves { } é executado.</li>
+            <li>Ex: <code>let hora = 11</code></li>
+            <li><code>if (hora &lt 12 ){</code></li>
+            <li>// Esta condição (11 é menor que 12) é verdadeira, então este código roda.</li>
+            <li><code>  console.log("Bom dia!");</code></li>
+            <li><code>}</code></li>
+          </ul>
+        </div>
+        <div class="else-wrapper">
+          <h3>
+            A estrutura else
+          </h3>
+          <ul>
+            <li>Se a condição if for falsa(false),voce pode executar o else para especificar uma alternativa para ser executada.</li>
+            <li><code>Ex: let hora = 15</code></li>
+            <li><code>if (hora &lt 12) {</code></li>
+            <li>// 15 não é menor que 12, então esta parte é ignorada.</li>
+            <li><code>console.log("Bom dia!"); </code></li>
+            <li>Neste caso bom dia é ignorado.</li>
+            <li><code>} else {</code></li>
+            <li>  // A condição foi falsa, então este código roda:</li>
+            <li><code>console.log("Boa tarde!");</code></li>
+            <li><code>}</code></li>
+          </ul>
+        </div>
+
+        <div class="else-if">
+          <H3>Condições aninhadas</H3>
+          <img src="assets/Elseif.PNG" alt="">
+          <p>Para ir para o bloco2 o bloco1 deverá ser falso (executar o else do bloco1)</p>
+          <h3>Exemplo prático:</h3>
+          <pre>
+            
+var idade = 67
+console.log(`Você tem ${idade} anos`)
+  if (idade &lt 16){
+    console.log('Não vota')
+  }else if (idade &gt 18 || idade > 65){
+      console.log('Voto opcional')
+  }else {
+      console.log('Voto obrigatório')
+    }
+
+          </pre>
+
+          <h3>Segundo exemplo:</h3>
+          <pre>
+var agora = new Date()
+  var hora = agora.getHours()
+  var minuto = agora.getMinutes()
+  console.log(`Agora são exatamente
+   ${hora} horas e ${minuto}
+    minutos.` )
+
+  if (hora &lt= 4 || hora &gt= 18){
+    console.log('Boa noite!')
+  }else if(hora &lt=12){
+    console.log('Bom dia')
+  }else{
+    console.log('Boa tarde')
+  }
+          </pre>
+          <p>Dica: pegar hora exata do sistema variavel.getHours,pegar minuto variavel.getMinutes,... </p>
+        </div>
+
+        <div class="multipleConditions">
+          <h3>Condição múltipla (switch)</h3>
+          <img src="assets/condiçãoMultipla.PNG" alt="">
+          <p>Tem a possibilidade de varios valores fixos.</p>
+          <p>Switch serve para testar valores pontuais,valores inteiros e com caracteres/strings</p>
+          <img src="assets/CondiçãoInteira.PNG" alt="">
+          <pre>
+var day = new Date()
+var diaSem = day.getDay()
+
+
+
+ <code>
+   0 = domingo
+   1 = segunda
+   2 = terça
+   3 = quarta
+   4 = quinta
+   5 = sexta
+   6 = sábado
+   
+ </code>
+
+console.log(diaSem)
+
+switch(diaSem){
+  case 0:
+    console.log('Domingo')
+    break
+
+  case 1:
+    console.log('Segunda')
+    break
+  case 2:
+    console.log('Terça')
+    break
+  case 3:
+    console.log('Quarta')
+    break
+  case 4:
+    console.log('Quinta')
+    break
+  case 5:
+    console.log('Sexta')
+  case 6:
+    console.log('Sabado')
+    break
+
+  default:
+    console.log('[ERROR]
+     Digite um dia válido')
+    break
+}
+          </pre>
+        </div>
+        <div class="buttonWhite">
+          <a href="group/ifElse.html">Ver exemplos de if & else</a>
+        </div>
+      </section>
+
+      <section class="box-js" id="regex">
+        <h2>Expressão Regular (ou Regex)</h2>
+        <p>Uma Expressão Regular é uma sequência de caracteres que define um padrão de busca.</p>
+        <p>São eles:</p>
+        <ul>
+          <li>Buscar: Encontrar a ocorrência de um padrão específico em um texto (string).</li>
+          <li>Validar: Verificar se um texto corresponde a um formato exigido (ex: formato de e-mail, CPF, data).</li>
+          <li>Substituir/Extrair: Trocar partes de um texto que correspondam ao padrão' ou extrair informações específicas.</li>
+        </ul>
+        <h3>'/\D+/g' O que essa expressão faz?</h3>
+        <ul id="listFirstExample">
+          <div>
+            <li>'/' e '/'</li>
+            <li>Delimitam o início e o fim da expressão.</li>
+          </div>
+          <div>
+            <li>'\D'</li>
+            <li>Corresponde a qualquer caractere que NÃO seja um dígito de 0 a 9. (É o oposto de \d, que corresponde a um dígito).</li>
+          </div>
+          <div>
+            <li>'+'</li>
+            <li>Significa "uma ou mais" ocorrências do item anterior (\D).</li>
+          </div>
+          <div>
+            <li>'g'</li>
+            <li>Significa que a busca deve ser Global, encontrando todas as ocorrências do padrão na string, e não parar após a primeira.</li>
+          </div>
+          <p>Em resumo, essa Regex busca por uma ou mais sequências de caracteres que não são números, em todo o texto.</p>
+          <div>
+            <li>Se você aplicar <strong>/\D+/g</strong> na string: "Minha idade e 30 anos e meu peso e 85 kg"</li>
+            <li>As correspondências (matches) que seriam encontradas são:</li>
+            <ol>
+              <li>"Minha idade e"</li>
+              <li>"anos e meu peso e"</li>
+              <li>"kg"</li>
+            </ol>
+            <p>Os números (30 e 85) seriam ignorados (não correspondidos), pois o padrão é explicitamente por não-dígitos.</p>
+          </div>
+        </ul>
+        <h2>
+          Mais Exemplos de Expressões Regulares Comuns
+        </h2>
+        <ul id="listSecondExample">
+          <li>
+            <ul>
+              <li>Exemplo: user@exemplo.com</li>
+              <li>regex: <code>/user/</code></li>
+              <li>Resultado: "user"</li>
+              <li>Encontra a sequência exata de caracteres "user".</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Exemplo: banana e abacaxi</li>
+              <li>regex: <code>/a/g</code></li>
+              <li>Resultado: ["a", "a", "a", "a", "a", "a"]</li>
+              <li>O flag g (global) encontra TODAS as letras 'a', não apenas a primeira.</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Exemplo: Abacaxi</li>
+              <li>regex: <code>/^A/</code></li>
+              <li>Resultado: ["A"]</li>
+              <li>O ^ âncora a busca no início da string.</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Exemplo:Este é o fim</li>
+              <li>regex:<code> /fim$/</code></li>
+              <li>Resultado:["fim"]</li>
+              <li>O $ âncora a busca no fim da string.</li>
+            </ul>
+          </li>
+          <p>E existem muitas outros tipos de regex para estudar.</p>
+        </ul>
+      </section>
+
+      <section class="box-js" id="object">
+        <h1>Objetos</h1>
+        <p>Um objeto é uma estrutura que representa algo com propriedades e comportamentos.</p>
+          <h3 class="marg1rem">Métodos e Interpolação</h3>
+          <div>
+              <p>Um Método é uma função associada a um objeto. Abaixo, o método <code>message</code> usa Interpolação (<code>${}</code>) para exibir a propriedade <code>name</code>.</p>
+              <pre id="LinkMoveToCode">
+    const user = {
+      name: "Leonardo",
+      <code>message</code>: function(){
+        console.log(`Olá 
+        <code>${user.name}</code>`) 
+      } 
+    } 
+    user.message() 
+     <NewTag>Saída: Olá Leonardo</NewTag></pre>
+    </div>
+
+    <div class="exemplo-box">
+        <h2 class="titulo-subsecao">Exemplo de um Objeto</h2>
+        <pre>
+const user = {
+  <code>email</code>:"João@email.com",
+  <code>age</code>: 19,
+  <code>name</code>: {
+    <code>firstName</code>: "João",
+    <code>surname</code>: "Silva",
+  },
+
+  <code>address</code>:{
+    <code>street</code>: "Rua X",
+    <code>number</code>: 23,
+    <code>city</code>: "São Paulo",
+    <code>postal_code</code>: "12345-123"
+  },
+  <code>message</code>: function (){
+      console.log('Oi João')
+  }
+}
+        </pre>
+        <ul class="ListDisc">
+          <li>User é a variável.</li>
+          <li>Objeto é a estrutura inteira.</li>
+          <li>Email,age,name,address e message são propriedades</li>
+          <li>FirstName,surname,street,number,city e postal_code são propriedades aninhadas das propriedades anteriores</li>
+          <li>"João@email.com" , 19 , "João" , "Silva" , "Rua X" , 23 , "São Paulo" e "12345-123" são apenas valores das propriedades anteriores,mas não são propriedades.</li>
+        </ul>
+
+        <div class="pointNotation">
+          <h2>Acessando propriedades e métodos usando a notação de ponto.</h2>
+<pre>
+  console.log(user.email)
+  
+  console.log(user.name.firstName)
+  console.log(user.name.surname)
+
+  <P>Acessando os valores das propriedades</P>
+  <small>console.log(user.address.postal_code)</small>
+</pre>
+        </div>
+        <h3>// Executa o método do objeto.</h3>
+        <pre>
+                variável.message()
+        </pre>
+
+        
+    </div>
+    
+
+    <div class="updatingPropertys">
+      <h2 class="titulo-subsecao">Atualizando Propriedades do Objeto</h2>
+      <p>Propriedades de objetos podem ser alteradas a qualquer momento usando as notações de ponto ou colchetes.</p>
+      <pre>
+      const product = {
+        name: "teclado",
+        quantity: 100,
+      }
+      
+      <h2>Notação de Ponto</h2>
+      console.log(product.quantity)
+       Saída: 100
+      product.quantity = 90
+      console.log(product.quantity)
+       Saída: 90
+      
+      <h2>Notação de Colchetes</h2>
+      product["quantity"] = 50
+      console.log(product["quantity"])
+       Saída: 50
+      
+      <h2>Outro exemplo de 
+notação de colchetes</h2>
+console.log(user["email"])
+console.log(user["name"]["surname"])
+user["message"]()
+<a href="#LinkMoveToCode" class="LinkMoveToCode">              Ver código completo</a>
+      </pre>
+
+       
+    </div>
+
+    <div class="emptyObject">
+      <h3>Criar um objeto vazio.</h3>
+          <pre>
+      Cria um objeto vazio.
+      const obj = {}
+      console.log(obj)
+      console.log(typeof obj)
+          </pre>
+    </div>
+
+    <div class="this">
+      <h2 class="this titulo-subsecao ">A Palavra-Chave 'this'</h2>
+      <p>O <code>this</code> se refere ao próprio objeto no qual o método está sendo executado. Ele torna o código mais flexível, pois não depende do nome da variável do objeto.</p>
+      <h3 class="titulo-subsecao">Regra do 'this': <code>function</code> vs. Arrow Function</h3>
+      <div class="exemplo-box">
+          <p class="marg2rem"><strong>1.<code>Function</code></strong>: O <code>this</code> aponta para o objeto <code>automovel</code>.</p>
+          <pre>
+      const automovel = {
+        yourName: "Leonardo",
+        message: <code>function(){</code>
+      console.log(`Olá
+      ${this.yourName}`) 
+        }
+      }
+      automovel.message() 
+      <NewTag>Saída: Olá Leonardo</NewTag></pre>
+          <p><strong>2.Arrow Function</strong>:this não funciona com Arrow Function.</p>
+          <pre>
+      const automovel = {
+        yourName: "Leonardo",
+        message: <code>() => {</code>
+      console.log(`Olá
+      ${this.yourName}`)
+        }
+      }
+      automovel.message()
+      <NewTag>Saída: Olá undefined</NewTag></pre>
+      </div>
+    </div>
+    
+    
+
+    <h2 class="titulo-subsecao" id="optionalChaining">Optional Chaining (<code>?.</code>)</h2>
+    <p>Se uma propriedade aninhada (ou função) for null ou undefined (ou não tiver valor), a expressão retorna <code>undefined</code> em vez de gerar um erro.</p>
+    
+    <div class="exemplo-box">
+        <pre>
+<small>
+  const user = {
+    id: 1,
+    name: "Leonardo",
+    address: {
+      street: "Avenida Brasil",
+    },
+    message: function(){
+      console.log(`Olá,${this.name}`)
+    }
+  }
+</small>
+
+O "?." evita um erro se 'geo'
+ ou 'latitude' não existir. 
+ <code><small>console.log(user?.address?.geo?.latitude) </small></code>
+ Saída: undefined (sem erro!)
+
+Também funciona para funções,
+ executando-a apenas se ela existir.
+<code><small>user.message?.()</small></code>
+ Executa a função 'message' 
+ com segurança.</pre>
+    </div>
+</section>
 
       
     </article>
-
   </main>
+
+
+
   <a href="#java-script" id="button">
     <img src="https://icons.iconarchive.com/icons/icons8/ios7/128/Arrows-Up-4-icon.png" width="60" height="60">
   </a>

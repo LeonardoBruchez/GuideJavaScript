@@ -11,14 +11,18 @@ html {
 :root {
   --font1rem: 400 1rem "Inter",sans-serif;
   --font1-5rem: 600 1.3rem "Inter",sans-serif;
+  --font1-5rem500:500 1.5rem "Inter",sans-serif;
   --font2rem:700 1.3rem "Inter",sans-serif;
+  --font2rem700:700 2rem "Inter",sans-serif;
 }
 
 @media (width >=43.75rem){
   :root {
     --font1rem: 400 1.3rem "Inter",sans-serif;
-    --font1-5rem: 600 1.5rem "Inter",sans-serif;
+    --font1-5rem: 400 1.5rem "Inter",sans-serif;
+    --font1-5rem500:500 1.5rem "Inter",sans-serif;
     --font2rem:700 1.7rem "Inter",sans-serif;
+    --font2rem700:700 2rem "Inter",sans-serif;
   }
   
 }

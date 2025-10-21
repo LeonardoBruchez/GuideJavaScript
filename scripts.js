@@ -26,6 +26,42 @@
     // console.log(n2)
     // console.log(n2.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
 
-    var n3 = 1543.5
-    console.log(n3)
-    console.log(n3.toLocaleString('pt-BR', {style: 'currency',currency:'EUR'}))
+    // var n3 = 1543.5
+    // console.log(n3)
+    // console.log(n3.toLocaleString('pt-BR', {style: 'currency',currency:'EUR'}))
+
+// window.prompt()
+// var p1 = document.g('p')[2]
+
+    var showSumary = document.querySelector('button#showSumary')
+    var sumary = document.querySelector('section#sumary')
+
+    let visible = false;
+
+
+    showSumary.addEventListener('click', function(){
+
+        if (visible === false) {
+            sumary.classList.remove('hiden')
+            
+            visible = true
+
+            console.log("Apareceu")
+
+            showSumary.textContent = 'Esconder'
+            
+        }
+
+        else{
+            sumary.classList.add('hiden')
+
+            visible = false
+
+            console.log("Sumiu")
+
+            showSumary.textContent = 'Ver sumário'
+        }
+    })
+
+
+

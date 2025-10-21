@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Var,Let e Const</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    color: white;
+    background-color: rgb(32, 2, 56);
+    font: 600 1.4rem arial;
+  }
+
+  main {
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    position: fixed;
+    display: flex;
+    justify-self: center;
+    bottom: 0;
+    background-color: rgb(83, 13, 139);
+    width: fit-content;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    position: relative;
+    transform: translate(300px 300px);
+    transition: background-color 750ms;
+
+    &:hover {
+      background-color: rgb(104, 26, 168);
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font: 600 1.4rem arial;
+  }
+
+  @media (width >= 43.75rem){
+    main {
+      max-width: 43.75rem;
+      width: 100%;
+    }
+  }
+</style>
+<body>
+  <main>
+    <h1>Var,Let e Const</h1>
+    <div class="const">
+      <p>Use const para a maioria das variáveis</p>
+      <ul>
+        <li>Declara uma variável cujo valor NUNCA pode ser reatribuído (trocado).</li>
+        <ul type="disc">
+          <li>const preço = 50;</li>
+          <li> preço = 60;</li>
+          <li>❌ ERRO!</li>
+        </ul>
+        <li>Escopo de Bloco ({}) — A variável só existe no bloco onde foi definida. Isso é seguro e previsível.</li>
+        <li>OBRIGATÓRIA. Precisa ter um valor logo na declaração.</li>
+      </ul>
+    </div>
+    <div class="let">
+      <p>Use let apenas quando você souber que o valor da variável precisará ser alterado no futuro.</p>
+      <ul>
+        <li>Declara uma variável cujo valor PODE ser reatribuído (trocado).</li>
+        <li>Escopo de Bloco ({}) — Assim como o const, é moderno e seguro.</li>
+        <li>	PROIBIDA redeclaração. Você não pode declarar(criar) uma variável let duas vezes no mesmo escopo.</li>
+        <ul type="disc">
+          <li>Ex: let x = 1;</li> 
+          <li>let x = 2;</li>  
+          <li>❌ ERRO!</li>
+        </ul>
+      </ul>
+    </div>
+    <div class="var">
+      <p>O var é a forma antiga de declarar variáveis no JavaScript (antes de 2015). É recomendado EVITAR seu uso em novos projetos.</p>
+      <ul>
+        <li>Declara uma variável.	</li>
+        <li>Escopo de Função (não respeita blocos {}).</li>
+        <ul type="disc">
+          <li>Ele "vaza" para fora de blocos if ou for, podendo sobrescrever variáveis que você não pretendia.</li>
+        </ul>
+        <li>Redeclaração permitida, você pode declarar a mesma variável várias vezes sem aviso, escondendo bugs.</li>
+      </ul>
+    </div>
+    <a href="../index.html">
+      <span>Voltar</span>
+    </a>
+  </main>
+  
+</body>
+</html>

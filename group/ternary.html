@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Var,Let e Const</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    color: white;
+    background-color: rgb(32, 2, 56);
+    font: 600 1.4rem arial;
+  }
+
+  main {
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+
+    h1 {
+      text-align: center;
+    }
+    
+    a {
+      position: fixed;
+      display: flex;
+      justify-self: center;
+      bottom: 0;
+      background-color: rgb(83, 13, 139);
+      width: fit-content;
+      padding: 1.4rem;
+      border-radius: 1rem;
+      position: relative;
+      transform: translate(300px 300px);
+      transition: background-color 750ms;
+      color: white;
+      text-decoration: none;
+      font: 600 1.4rem arial;
+  
+      &:hover {
+        background-color: rgb(104, 26, 168);
+      }
+    }
+
+    & p {
+      background-color: darkorchid;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+  }
+
+
+  @media (width >= 43.75rem){
+    main {
+      max-width: 43.75rem;
+      width: 100%;
+    }
+  }
+</style>
+<body>
+  <main>
+    <header>
+      <h1>
+        Ternário
+      </h1>
+    </header>
+    <div class="firstExample">
+      <h3>Primeiro exemplo</h3>
+      <ul>
+        <li>var x = 8</li>
+        <li>var res = x % 2 == 0 ? 5: 9</li>
+        <li>se o resto de x % 2 for 0 então 0 == 0 será verdade.</li>
+        <li>e se for verdade resultado final da res 5: 9 será 5</li>
+        <li>Se for falso (no caso de x % 2 não sobrar um resto de0 ) o resultado será 9.</li>
+      </ul>
+
+      <h3>Segundo exemplo</h3>
+      <ul>
+        <li>idade = 19</li>
+        <li>var r = idade >= 18 ? 'MAIOR' : 'MENOR'.</li>
+        <li>se a idade for maior ou igual a 18 (idade >= 18 ?) ele irá executar o 'MAIOR'. </li>
+        <li>se a idade for menor que 18 irá executar o 'MENOR'</li>
+        <li>Neste caso ele executou o 'MAIOR'.</li>
+      </ul>
+      <p>Execute os exemplos no node.js para praticar e entender.</p>
+    </div>
+    <a href="../index.html">
+      <span>Voltar</span>
+    </a>
+  </main>
+  
+</body>
+</html>
