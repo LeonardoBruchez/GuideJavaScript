@@ -1322,6 +1322,7 @@
   }
 
   & #object{
+    line-height: 1.8;
     & code {
       background-color: rgb(38, 2, 59);
       border-radius: 0.2rem;
@@ -1364,6 +1365,12 @@
       color: blueviolet;
       &:hover{
         color: white;
+      }
+    }
+
+    & .nullishCoalescing{
+      & h2 {
+        margin-block: 2.4rem 1rem;
       }
     }
 

@@ -88,11 +88,13 @@
             visible1 = true
             showVariables.style.background = 'rgba(179, 178, 178, 1)'
             showVariables.style.outline = '2px solid rgba(255, 255, 255, 1)'
+            showVariables.textContent = 'Fechar explicação'
         }else{
             examplesVariables.classList.add('hiden')
             visible1 = false
             console.log('sumiu')
             showVariables.style.background = 'white'
+            showVariables.textContent = 'Ver explicação'
         }
     })
 
@@ -100,9 +102,11 @@
         if(visible2 === false){
             CamelSnake.classList.remove('hiden')
             visible2 = true
+            showCamelSnake.textContent = 'Fechar explicação'
         }else{
             CamelSnake.classList.add('hiden')
             visible2 = false
+            showCamelSnake.textContent = 'Ver explicação'
         }
     })
 
@@ -110,9 +114,11 @@
         if(visible3 === false){
             numberStringExamples.classList.remove('hiden')
             visible3 = true
+            showNumberString.textContent = 'Fechar explicação'
         }else {
             numberStringExamples.classList.add('hiden')
             visible3 = false
+            showNumberString.textContent = 'Ver explicação'
         }
     })
 
@@ -120,9 +126,11 @@
         if(visible4 === false){
             valueconversions.classList.remove('hiden')
             visible4 = true
+            showValueConversions.textContent = 'Fechar explicação'
         }else{
             valueconversions.classList.add('hiden')
             visible4 = false
+            showValueConversions.textContent = 'Ver explicação'
         }
     })
 
@@ -130,9 +138,11 @@
         if(visible5 === false){
             templateLiteralsExamples.classList.remove('hiden')
             visible5 = true
+            showTemplateLiterals.textContent = 'Fechar explicação'
         }else{
             templateLiteralsExamples.classList.add('hiden')
             visible5 = false
+            showTemplateLiterals.textContent = 'Ver explicação'
         }
     })
 
@@ -141,10 +151,12 @@
             convertSecNumb.classList.remove('hiden')
             visible6 = true
             console.log('apareceu')
+            showconvertSecNumb.textContent = 'Fechar explicação'
         }else{
             convertSecNumb.classList.add('hiden')
             visible6 = false
             console.log('sumiu')
+            showconvertSecNumb.textContent = 'Ver explicação'
         }
     })
 
@@ -152,9 +164,11 @@
         if(visible7 === false){
             convertionDotComma.classList.remove('hiden')
             visible7 = true
+            showConvertDot.textContent = 'Fechar explicação'
         }else{
             convertionDotComma.classList.add('hiden')
             visible7 = false
+            showConvertDot.textContent = 'Ver explicação'
         }
     })
 
@@ -162,9 +176,11 @@
         if(visible8 === false){
             converterCoinWrapper.classList.remove('hiden')
             visible8 = true
+            showconverterCoin.textContent = 'Fechar explicação'
         }else{
             converterCoinWrapper.classList.add('hiden')
             visible8 = false
+            showconverterCoin.textContent = 'Ver explicação'
         }
     })
 
@@ -172,9 +188,11 @@
         if(visible9 === false){
             autoAssignmentWrapper.classList.remove('hiden')
             visible9 = true
+            showautoAssignment.textContent = 'Fechar explicação'
         }else{
             autoAssignmentWrapper.classList.add('hiden')
             visible9 = false
+            showautoAssignment.textContent = 'Ver explicação'
         }
     })
 
@@ -182,9 +200,11 @@
         if(visible10 === false){
             incrementWrapper.classList.remove('hiden')
             visible10 = true
+            showIncrementWrapper.textContent = 'Fechar explicação'
         }else{
             incrementWrapper.classList.add('hiden')
             visible10 = false
+            showIncrementWrapper.textContent = 'Ver explicação'
         }
     })
 
@@ -192,9 +212,11 @@
         if(visible11 === false){
             relationalWrapper.classList.remove('hiden')
             visible11 = true
+            showRelational.textContent = 'Fechar explicação'
         }else{
             relationalWrapper.classList.add('hiden')
             visible11 = false
+            showRelational.textContent = 'Ver explicação'
         }
     })
 
@@ -202,9 +224,11 @@
         if(visible12 === false){
             logicWrapper.classList.remove('hiden')
             visible12 = true
+            showLogics.textContent = 'Fechar explicação'
         }else{
             logicWrapper.classList.add('hiden')
             visible12 = false
+            showLogics.textContent = 'Ver explicação'
         }
     })
 
@@ -212,9 +236,11 @@
         if(visible13 === false){
             arithmeticOperator.classList.remove('hiden')
             visible13 = true
+            showArithmeticOperator.textContent = 'Fechar explicação'
         }else{
             arithmeticOperator.classList.add('hiden')
             visible13 = false
+            showArithmeticOperator.textContent = 'Ver explicação'
         }
     })
 
@@ -222,9 +248,11 @@
         if(visible14 === false){
             ternaryWrapper.classList.remove('hiden')
             visible14 = true
+            showTernary.textContent = 'Fechar explicação'
         }else{
             ternaryWrapper.classList.add('hiden')
             visible14 = false
+            showTernary.textContent = 'Ver explicação'
         }
     })
 
@@ -232,9 +260,11 @@
         if(visible15 === false){
             domWrapper.classList.remove('hiden')
             visible15 = true
+            showDom.textContent = 'Fechar explicação'
         }else{
             domWrapper.classList.add('hiden')
             visible15 = false
+            showDom.textContent = 'Ver explicação'
         }
     })
 
@@ -242,9 +272,11 @@
         if(visible16 === false){
             conditionsWrapper.classList.remove('hiden')
             visible16 = true
+            showConditions.textContent = 'Fechar explicação'
         }else{
             conditionsWrapper.classList.add('hiden')
             visible16 = false
+            showConditions.textContent = 'Ver explicação'
         }
     })
 
@@ -252,9 +284,11 @@
         if(visible17 === false){
             regexWrapper.classList.remove('hiden')
             visible17 = true
+            showRegex.textContent = 'Fechar explicação'
         }else{
             regexWrapper.classList.add('hiden')
             visible17 = false
+            showRegex.textContent = 'Ver explicação'
         }
     })
 
@@ -262,9 +296,11 @@
         if(visible18 === false){
             objectWrapper.classList.remove('hiden')
             visible18 = true
+            showObject.textContent = 'Fechar explicação'
         }else{
             objectWrapper.classList.add('hiden')
             visible18 = false
+            showObject.textContent = 'Ver explicação'
         }
     })
 

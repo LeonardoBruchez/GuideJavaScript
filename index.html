@@ -43,10 +43,10 @@
       <section id="sumary" class="hiden">
         <h3>Sumário</h3>
         <ol type="1">
-          <li><a href="#variableDeclarations">Var,Let e Const,qual usar?</a></li>
+          <li><a href="#variableDeclarations">Var,Let e Const</a></li>
           <li><a href="#CamelSnakeCase">Camel Case e Snake Case</a></li>
           <li><a href="#numberAndString">Number e string</a></li>
-          <li><a href="#ValueConversion">Convertendo string to number</a></li>
+          <li><a href="#ValueConversion">Conversão de string para number</a></li>
           <li><a href="#templateLiterals">templateLiterals ${ }</a></li>
           <li><a href="#convertSecondNumber">Conversão duas casas decimais</a></li>
           <li><a href="#convertDotInComma">Conversão ponto para virgula</a></li>
@@ -67,7 +67,7 @@
 
       <section class="box-js" id="variableDeclarations">
         <h3>1. Var,Let e Const</h3>
-        <button type="submit" class="buttonWhite" id="showVariables">Ver exemplos</button>
+        <button type="submit" class="buttonWhite" id="showVariables">Ver explicação</button>
         <div class="examplesVariables hiden">
           <ul>
             <li>Dicas</li>
@@ -950,7 +950,7 @@ usar ${variavel.length}
             <small>console.log(user.address.postal_code)</small>
           </pre>
           </div>
-          <h3>// Executa o método do objeto.</h3>
+          <h3> Executa o método do objeto.</h3>
           <pre>
                   variável.message()
           </pre>
@@ -1081,8 +1081,8 @@ usar ${variavel.length}
           console.log(content ?? "conteúdo padrão")
                 </pre>
                 <p>OPERADOR DE COALESCÊNCIA NULA (??) verifica se content é null,se for null irá executar a string após "??"</p>
-                <p>Mas se content tiver algum valor além de nulo ou undefined ele mostrará o conteúdo</p>
-                <p>FALSE ele entende como conteúdo,e não como null/undefined</p>
+                <p>Mas se content tiver algum valor além de nulo ou undefined ele mostrará o conteúdo.</p>
+                <p>O boolean FALSE ele entende como conteúdo,e não como null/undefined</p>
                 <pre>
           const user = {
             name: "Leonardo",
