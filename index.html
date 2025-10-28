@@ -53,15 +53,15 @@
         <h3>1. Var,Let e Const</h3>
         <button type="submit" class="buttonWhite" id="showVariables">Ver exemplos</button>
         <div class="examplesVariables hiden">
-          <div class="const">
-            <p>Qual usar?</p>
-            <ul>
-              <li>No JavaScript moderno, a prática recomendada para evitar bugs e ter um código mais claro é abandonar o var e seguir esta regra</li>
+          <ul>
+            <li>Dicas</li>
+            <li>No JavaScript moderno, a prática recomendada para evitar bugs e ter um código mais claro é abandonar o var e seguir esta regra:</li>
             
-              <li>Use const por padrão para tudo.</li>
-              <li>Use let apenas se você souber que precisará reatribuir o valor da variável (ex: contadores em loops for, ou variáveis que rastreiam estados).</li>
-              </ul>
-              <h3>Use const para a maioria das variáveis</p>
+            <li>Use const por padrão para tudo.</li>
+            <li>Use let apenas se você souber que precisará reatribuir o valor da variável (ex: contadores em loops for, ou variáveis que rastreiam estados).</li>
+          </ul>
+          <div class="const">
+            <h3>Const</h3>
             <ul>
               <li>Declara uma variável cujo valor NUNCA pode ser reatribuído (trocado).</li>
               <ul type="disc">
@@ -70,25 +70,47 @@
                 <li>❌ ERRO!</li>
               </ul>
               <li>Escopo de Bloco ({}) — A variável só existe no bloco onde foi definida. Isso é seguro e previsível.</li>
+              <pre>
+const limite = 10;
+if (limite > 5) { // Inicio
+
+const resultado = "Maior que 5"; 
+    
+console.log(resultado);
+✅ VÁLIDO 
+'resultado' existe dentro do bloco
+    
+
+}//FIM DO BLOCO
+              </pre>
               <li>OBRIGATÓRIA. Precisa ter um valor logo na declaração.</li>
             </ul>
           </div>
           <div class="let">
-            <p>Use let apenas quando você souber que o valor da variável precisará ser alterado no futuro.</p>
+            <h3>Let</h3>
             <ul>
               <li>Declara uma variável cujo valor PODE ser reatribuído (trocado).</li>
               <li>Escopo de Bloco ({}) — Assim como o const, é moderno e seguro.</li>
               <li>	PROIBIDA redeclaração. Você não pode declarar(criar) uma variável let duas vezes no mesmo escopo.</li>
+              <li>Redeclaração é usar o let para a mesma variavel</li>
+              <li>Ex:</li>
+              <pre>
+Let name = leo
+Let name = joao
+Proibido ❌
+              </pre>
+              <li>Permitido reatribuição! isso significa mudar o valor de uma variável que já existe, sem usar novamente a palavra-chave let.</li>
               <ul type="disc">
                 <li>Ex: let x = 1;</li>
-                <li>let x = 2;</li>
-                <li>❌ ERRO!</li>
+                <li>x = 2;</li>
+                <li>Permitido!✅</li>
               </ul>
             </ul>
           </div>
           <div class="var">
-            <p>O var é a forma antiga de declarar variáveis no JavaScript (antes de 2015). É recomendado EVITAR seu uso em novos projetos.</p>
+            <h3>Var</h3>
             <ul>
+              <li>O var é a forma antiga de declarar variáveis no JavaScript (antes de 2015). É recomendado EVITAR seu uso em novos projetos.</li>
               <li>Declara uma variável.	</li>
               <li>Escopo de Função (não respeita blocos {}).</li>
               <ul type="disc">
@@ -105,22 +127,26 @@
            <h2>2. Snake Case e Camel Case</h2>
            <button type="submit" class="buttonWhite" id="showCamelSnake">Ver explicação</button>
            <div id="CamelSnake" class="hiden">
-             <h3>Snake Case (ou snake_case)</h3>
-             <ul>
-               <li>No Snake Case, as palavras são separadas por sublinhados ($\_$).</li>
-               <li>Exemplo: minha_variavel_longa</li>
-               <li>É muito comum em linguagens como Python e Ruby.</li>
-               <li>É frequentemente usado para nomes de variáveis, funções e arquivos.</li>
-               <li>É considerado altamente legível, pois cada palavra está claramente separada.</li>
-             </ul>
-             <h3>Camel Case (ou camelCase)</h3>
-             <ul>
-               <li>No Camel Case, a primeira palavra começa com letra minúscula e as palavras subsequentes começam com letra maiúscula, sem espaços ou sublinhados.</li>
-               <li>Exemplo: minhaVariavelLonga</li>
-               <li>É a convenção padrão em linguagens como JavaScript, Java e C# (para variáveis e métodos).</li>
-               <li>O nome vem da "corcova" que as letras maiúsculas formam no meio da palavra.</li>
-               <li>Em Java, ele é estritamente usado para métodos e variáveis.</li>
-             </ul>
+             <div class="snake_case">
+               <h3>Snake Case (ou snake_case)</h3>
+               <ul>
+                 <li>No Snake Case, as palavras são separadas por sublinhados ($\_$).</li>
+                 <li>Exemplo: minha_variavel_longa</li>
+                 <li>É muito comum em linguagens como Python e Ruby.</li>
+                 <li>É frequentemente usado para nomes de variáveis, funções e arquivos.</li>
+                 <li>É considerado altamente legível, pois cada palavra está claramente separada.</li>
+               </ul>
+             </div>
+             <div class="camel_case">
+               <h3>Camel Case (ou camelCase)</h3>
+               <ul>
+                 <li>No Camel Case, a primeira palavra começa com letra minúscula e as palavras subsequentes começam com letra maiúscula, sem espaços ou sublinhados.</li>
+                 <li>Exemplo: minhaVariavelLonga</li>
+                 <li>É a convenção padrão em linguagens como JavaScript, Java e C# (para variáveis e métodos).</li>
+                 <li>O nome vem da "corcova" que as letras maiúsculas formam no meio da palavra.</li>
+                 <li>Em Java, ele é estritamente usado para métodos e variáveis.</li>
+               </ul>
+             </div>
            </div>
         </div>
       </section>

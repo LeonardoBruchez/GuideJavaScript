@@ -4,6 +4,7 @@
   max-width: 550px;
   width: 100%;
   margin: auto;
+  padding-inline: 0.6rem;
   outline: 3px solid rgb(81, 8, 175);
   background-color: rgb(79, 31, 134);
   border-radius: .5rem;
@@ -101,19 +102,29 @@
       text-align: center;
     }
 
-    & p {
+    & .const,.let,.var{
+      background-color: rgb(52, 58, 85);
       font: var(--font1-5rem);
-      margin-bottom: 1rem;
-    }
-    & ul {
-      list-style-type: disc;
+      border-radius: .5rem;
+      padding: .6rem;
+      margin-block: 2rem;
+      & ul {
+      list-style-type: none;
       list-style-position: inside;
       display: grid;
       gap: 1rem;
       & li {
         font: var(--font1rem);
       }
+      & pre {
+        font: var(--font1rem);
+        line-height: 1.8;
+      }
     }
+    }
+    
+
+    
   }
 
 
@@ -128,10 +139,15 @@
       }
     }
 
-    & #stylesName-Wrapper{
-      & h3:nth-child(3){
-        margin-block: 2rem 0.25rem;
-      }
+    & .snake_case{
+      margin-bottom: 1.5rem;
+    }
+
+    & #CamelSnake{
+      background-color: rgb(71, 83, 99);
+      border-radius: .5rem;
+      padding: .6rem;
+      margin-block: 2rem;
     }
   }
   
