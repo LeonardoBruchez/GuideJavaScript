@@ -1,28 +1,41 @@
-    var showSumary = document.querySelector('button#showSumary')
-    var sumary = document.querySelector('section#sumary')
-    var showVariables = document.querySelector('button#showVariables')
-    var examplesVariables = document.querySelector('div.examplesVariables')
-    var showCamelSnake = document.querySelector('button#showCamelSnake')
-    var CamelSnake = document.querySelector('div#CamelSnake')
-    var showNumberString = document.querySelector('button#showNumberString')
-    var numberStringExamples = document.querySelector('div#numberStringExamples')
-    var showValueConversions = document.querySelector('button#showValueConversions')
-    var valueconversions = document.querySelector('div#valueconversions')
-    var showTemplateLiterals = document.querySelector('button#showTemplateLiterals')
-    var templateLiteralsExamples = document.querySelector('div#templateLiteralsExamples')
-    var showconvertSecNumb = document.querySelector('button#showconvertSecNumb')
-    var convertSecNumb = document.querySelector('div#convertSecNumb')
-    var showConvertDot = document.querySelector('button#showConvertDot')
-    var convertionDotComma = document.querySelector('div#convertionDotComma')
-    var showconverterCoin = document.querySelector('button#showconverterCoin')
-    var converterCoinWrapper = document.querySelector('div#converterCoinWrapper')
-    var showautoAssignment = document.querySelector('button#showautoAssignment')
-    var autoAssignmentWrapper = document.querySelector('div#autoAssignment-Wrapper')
-    
-
-    
-    
-
+    const showSumary = document.querySelector('button#showSumary')
+    const sumary = document.querySelector('section#sumary')
+    const showVariables = document.querySelector('button#showVariables')
+    const examplesVariables = document.querySelector('div.examplesVariables')
+    const showCamelSnake = document.querySelector('button#showCamelSnake')
+    const CamelSnake = document.querySelector('div#CamelSnake')
+    const showNumberString = document.querySelector('button#showNumberString')
+    const numberStringExamples = document.querySelector('div#numberStringExamples')
+    const showValueConversions = document.querySelector('button#showValueConversions')
+    const valueconversions = document.querySelector('div#valueconversions')
+    const showTemplateLiterals = document.querySelector('button#showTemplateLiterals')
+    const templateLiteralsExamples = document.querySelector('div#templateLiteralsExamples')
+    const showconvertSecNumb = document.querySelector('button#showconvertSecNumb')
+    const convertSecNumb = document.querySelector('div#convertSecNumb')
+    const showConvertDot = document.querySelector('button#showConvertDot')
+    const convertionDotComma = document.querySelector('div#convertionDotComma')
+    const showconverterCoin = document.querySelector('button#showconverterCoin')
+    const converterCoinWrapper = document.querySelector('div#converterCoinWrapper')
+    const showautoAssignment = document.querySelector('button#showautoAssignment')
+    const autoAssignmentWrapper = document.querySelector('div#autoAssignment-Wrapper')
+    const showIncrementWrapper = document.querySelector('button#show_increment_wrapper')
+    const incrementWrapper = document.querySelector('div#increment_wrapper')
+    const showRelational = document.querySelector('button#show_relational')
+    const relationalWrapper = document.querySelector('div#relational_wrapper')
+    const showLogics = document.querySelector('button#show_logics')
+    const logicWrapper = document.querySelector('div#logic_wrapper')
+    const showArithmeticOperator = document.querySelector('button#show_arithmetic_operators')
+    const arithmeticOperator = document.querySelector('div#arithmetic_operators')
+    const showTernary = document.querySelector('button#show_ternary')
+    const ternaryWrapper = document.querySelector('div#ternary_wrapper')
+    const showDom = document.querySelector('button#show_DOM')
+    const domWrapper = document.querySelector('div#DOM-wrapper')
+    const showConditions = document.querySelector('button#show_conditions')
+    const conditionsWrapper = document.querySelector('div#conditions_wrapper')
+    const showRegex = document.querySelector('button#show_regex')
+    const regexWrapper = document.querySelector('div#regex-wrapper')
+    const showObject = document.querySelector('button#show_object')
+    const objectWrapper = document.querySelector('div#object-wrapper')
 
     let visible = false
     let visible1 = false
@@ -34,6 +47,15 @@
     let visible7 = false
     let visible8 = false
     let visible9 = false
+    let visible10 = false
+    let visible11 = false
+    let visible12 = false
+    let visible13 = false
+    let visible14 = false
+    let visible15 = false
+    let visible16 = false
+    let visible17 = false
+    let visible18 = false
 
     showSumary.addEventListener('click', function(){
 
@@ -156,8 +178,95 @@
         }
     })
 
+    showIncrementWrapper.addEventListener('click',function(){
+        if(visible10 === false){
+            incrementWrapper.classList.remove('hiden')
+            visible10 = true
+        }else{
+            incrementWrapper.classList.add('hiden')
+            visible10 = false
+        }
+    })
 
+    showRelational.addEventListener('click',function(){
+        if(visible11 === false){
+            relationalWrapper.classList.remove('hiden')
+            visible11 = true
+        }else{
+            relationalWrapper.classList.add('hiden')
+            visible11 = false
+        }
+    })
 
+    showLogics.addEventListener('click',function(){
+        if(visible12 === false){
+            logicWrapper.classList.remove('hiden')
+            visible12 = true
+        }else{
+            logicWrapper.classList.add('hiden')
+            visible12 = false
+        }
+    })
+
+    showArithmeticOperator.addEventListener('click',function(){
+        if(visible13 === false){
+            arithmeticOperator.classList.remove('hiden')
+            visible13 = true
+        }else{
+            arithmeticOperator.classList.add('hiden')
+            visible13 = false
+        }
+    })
+
+    showTernary.addEventListener('click',function(){
+        if(visible14 === false){
+            ternaryWrapper.classList.remove('hiden')
+            visible14 = true
+        }else{
+            ternaryWrapper.classList.add('hiden')
+            visible14 = false
+        }
+    })
+
+    showDom.addEventListener('click',function(){
+        if(visible15 === false){
+            domWrapper.classList.remove('hiden')
+            visible15 = true
+        }else{
+            domWrapper.classList.add('hiden')
+            visible15 = false
+        }
+    })
+
+    showConditions.addEventListener('click',function(){
+        if(visible16 === false){
+            conditionsWrapper.classList.remove('hiden')
+            visible16 = true
+        }else{
+            conditionsWrapper.classList.add('hiden')
+            visible16 = false
+        }
+    })
+
+    showRegex.addEventListener('click',function(){
+        if(visible17 === false){
+            regexWrapper.classList.remove('hiden')
+            visible17 = true
+        }else{
+            regexWrapper.classList.add('hiden')
+            visible17 = false
+        }
+    })
+
+    showObject.addEventListener('click',function(){
+        if(visible18 === false){
+            objectWrapper.classList.remove('hiden')
+            visible18 = true
+        }else{
+            objectWrapper.classList.add('hiden')
+            visible18 = false
+        }
+    })
 
 
 

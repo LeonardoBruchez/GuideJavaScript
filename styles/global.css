@@ -26,3 +26,9 @@ html {
   }
   
 }
+
+
+h2 {
+ font: var(--font2rem);
+ text-align: center;
+}

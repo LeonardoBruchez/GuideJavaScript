@@ -137,10 +137,8 @@
   
 
   & #numberAndString {
-    & h3 {
+    & h2 {
       padding-block: 2rem 1rem;
-      text-align: center;
-      font: var(--font1-5rem);
     }
 
     & p,ul {
@@ -191,9 +189,8 @@
   & #ValueConversion{
     display: grid;
     justify-content: center;
-    & h3 {
+    & h2 {
       padding-block: 2rem;
-      text-align: center;
     }
 
     & img {
@@ -441,7 +438,6 @@
 
   & #increment{
     & h2 {
-      text-align: center;
       padding-bottom: 1rem;
     }
 
@@ -457,7 +453,6 @@
 
   & #relational {
     & h2 {
-      text-align: center;
       padding-block: 1rem;
     }
 
@@ -527,7 +522,6 @@
     }
 
     & h2 {
-      text-align: center;
       padding-block: 1rem;
     }
 
@@ -1082,7 +1076,6 @@
 
   & #conditions{
     & h2 {
-      text-align: center;
       margin-block: .5rem 2rem;
     }
 
