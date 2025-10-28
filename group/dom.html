@@ -517,6 +517,7 @@
       <h2>Sumário</h2>
       <ol type="1"> 
         <li><a href="#windowAlert">Colocar conteúdo HTML no alerta da pagina web</a></li>
+        <li><a href="#createElement">Criar um elemento no JS</a></li>
         <li><a href="#selectingElements">As 5 formas de selecionar um elemento HTML pelo JavaScript</a></li>
         <li><a href="#SecondExample #selectingElements">Estilos CSS dentro do JavaScript</a></li>
         <li><a href="#writeInHTML">mostrar a variável no documento HTML</a></li>
@@ -560,8 +561,26 @@
       
     </div>
 
+    <div class="windowAlert" id="createElement">
+      <h3>2. Criar um elemento no JS</h3>
+      <p>Criar uma imagem pelo JS:</p>
+      <pre>var img = document.createElement('img')</pre>
+      <p>Adicionar Id no elemento criado:</p>
+      <pre>img.setAttribute('id','foto')</pre>
+      <p>Adicionar arquivo/imagem no elemento criado:</p>
+      <pre>img.setAttribute('src','namefoto.png')</pre>
+      <p>Adicionar o elemento à página como filho de algum elemento:</p>
+      <pre>.appendChild()</pre>
+      <p>Exemplo prático:</p>
+      <pre>res.appendChild(img)
+  res: variável
+  img: imagem que foi adicionada
+      </pre>
+
+    </div>
+
     <div class="selectingElements">
-      <h3><strong>2. As 5 formas de selecionar um elemento HTML pelo JavaScript</strong></h3> 
+      <h3><strong>3. As 5 formas de selecionar um elemento HTML pelo JavaScript</strong></h3> 
       
       <ul>
         <li>Por marca</li>

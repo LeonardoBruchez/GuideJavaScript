@@ -27,13 +27,13 @@
       <section id="sumary" class="hiden">
         <h3>Sumário</h3>
         <ol type="1">
-          <li><a href="#addScript">Como adicionar o script js no HTML?</a></li>
           <li><a href="#variableDeclarations">Var,Let e Const,qual usar?</a></li>
           <li><a href="#CamelSnakeCase">Camel Case e Snake Case</a></li>
           <li><a href="#numberAndString">Number e string</a></li>
           <li><a href="#ValueConversion">Convertendo string to number</a></li>
           <li><a href="#templateLiterals">templateLiterals ${ }</a></li>
-          <li><a href="#converter">Duas casas decimais</a></li>
+          <li><a href="#convertSecondNumber">Conversão duas casas decimais</a></li>
+          <li><a href="#convertDotInComma">Conversão ponto para virgula</a></li>
           <li><a href="#transformPoint">Transformar numero com " . " para " , "</a></li>
           <li><a href="#converterCoin">Conversão de número (Real,Dólar e Euro)</a></li>
           <li><a href="#ArithmeticOperators">Operadores aritméticos (5+2=7)</a></li>
@@ -49,29 +49,62 @@
         </ul>
       </section>
 
-      <section class="box-js" id="addScript">
-        <h3>
-          1. Como adicionar o script js no HTML?
-        </h3>
-        <p> Colocar sempre no fim do &#8249body&#8250 dentro do HTML</p>
-        <img src="assets/script-print.PNG" alt="">
-      </section>
-
       <section class="box-js" id="variableDeclarations">
-        <h3>2. Var,Let e Const</h3>
-        <p>Qual usar?</p>
-        <ul>
-          <li>No JavaScript moderno, a prática recomendada para evitar bugs e ter um código mais claro é abandonar o var e seguir esta regra</li>
-          <li>Use const por padrão para tudo.</li>
-          <li>Use let apenas se você souber que precisará reatribuir o valor da variável (ex: contadores em loops for, ou variáveis que rastreiam estados).</li>
-        </ul>
-        <a href="group/variables.html" class="buttonWhite">Aprender mais sobre</a>
+        <h3>1. Var,Let e Const</h3>
+        <button type="submit" class="buttonWhite" id="showVariables">Ver exemplos</button>
+        <div class="examplesVariables hiden">
+          <div class="const">
+            <p>Qual usar?</p>
+            <ul>
+              <li>No JavaScript moderno, a prática recomendada para evitar bugs e ter um código mais claro é abandonar o var e seguir esta regra</li>
+            
+              <li>Use const por padrão para tudo.</li>
+              <li>Use let apenas se você souber que precisará reatribuir o valor da variável (ex: contadores em loops for, ou variáveis que rastreiam estados).</li>
+              </ul>
+              <h3>Use const para a maioria das variáveis</p>
+            <ul>
+              <li>Declara uma variável cujo valor NUNCA pode ser reatribuído (trocado).</li>
+              <ul type="disc">
+                <li>const preço = 50;</li>
+                <li> preço = 60;</li>
+                <li>❌ ERRO!</li>
+              </ul>
+              <li>Escopo de Bloco ({}) — A variável só existe no bloco onde foi definida. Isso é seguro e previsível.</li>
+              <li>OBRIGATÓRIA. Precisa ter um valor logo na declaração.</li>
+            </ul>
+          </div>
+          <div class="let">
+            <p>Use let apenas quando você souber que o valor da variável precisará ser alterado no futuro.</p>
+            <ul>
+              <li>Declara uma variável cujo valor PODE ser reatribuído (trocado).</li>
+              <li>Escopo de Bloco ({}) — Assim como o const, é moderno e seguro.</li>
+              <li>	PROIBIDA redeclaração. Você não pode declarar(criar) uma variável let duas vezes no mesmo escopo.</li>
+              <ul type="disc">
+                <li>Ex: let x = 1;</li>
+                <li>let x = 2;</li>
+                <li>❌ ERRO!</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="var">
+            <p>O var é a forma antiga de declarar variáveis no JavaScript (antes de 2015). É recomendado EVITAR seu uso em novos projetos.</p>
+            <ul>
+              <li>Declara uma variável.	</li>
+              <li>Escopo de Função (não respeita blocos {}).</li>
+              <ul type="disc">
+                <li>Ele "vaza" para fora de blocos if ou for, podendo sobrescrever variáveis que você não pretendia.</li>
+              </ul>
+              <li>Redeclaração permitida, você pode declarar a mesma variável várias vezes sem aviso, escondendo bugs.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="box-js" id="CamelSnakeCase">
          <div class="stylesName">
-           <h2>3. Nomear variáveis compostas</h2>
-           <div id="stylesName-Wrapper">
+           <h2>2. Snake Case e Camel Case</h2>
+           <button type="submit" class="buttonWhite" id="showCamelSnake">Ver explicação</button>
+           <div id="CamelSnake" class="hiden">
              <h3>Snake Case (ou snake_case)</h3>
              <ul>
                <li>No Snake Case, as palavras são separadas por sublinhados ($\_$).</li>
@@ -93,116 +126,183 @@
       </section>
 
       <section class="box-js" id="numberAndString">
-        <h3>
-          4. Number e string
-        </h3>
-        <p><strong>String:</strong></p>
-        <ul>
-          <li>Não permite cálculos matemáticos.</li>
-          <li>Importante: String sempre são usadas dentro de aspas simples (' ') ou duplas (" ").</li>
-        </ul>
-        <img src="assets/string.png" alt="">
-        <p id="Nike">"Nike" é uma string.</p>
-        <div class="Line"></div>
-        <p><strong>Number:</strong></p>
-        <ul>
-          <li>Permite cálculos (somar, subtrair, multiplicar).	</li>
-          <li>Importante:  sempre é usada fora das aspas</li>
-        </ul>
-        <img src="assets/number.png" alt="">
-        <p id="number-4">4 é um number.</p>
+        <h2>
+          3. Number e string
+        </h2>
+        <button type="submit" class="buttonWhite" id="showNumberString">Ver explicação</button>
+        <div class="hiden" id="numberStringExamples">
+          <p><strong>String:</strong></p>
+          <ul>
+            <li>Não permite cálculos matemáticos.</li>
+            <li>Importante: String sempre são usadas dentro de aspas simples (' ') ou duplas (" ").</li>
+          </ul>
+          <img src="assets/string.png" alt="">
+          <p id="Nike">"Nike" é uma string.</p>
+          <div class="Line"></div>
+          <p><strong>Number:</strong></p>
+          <ul>
+            <li>Permite cálculos (somar, subtrair, multiplicar).	</li>
+            <li>Importante:  sempre é usada fora das aspas</li>
+          </ul>
+          <img src="assets/number.png" alt="">
+          <p id="number-4">4 é um number.</p>
+        </div>
       </section>
 
       <section class="box-js" id="ValueConversion">
-        <h3>5. Convertendo valores</h3>
-        <div class="toString">
-          <strong>Number para string</strong>
-          <img src="assets/numeroToString.PNG" alt="">
-          <p>Colocar o number ao lado de .toString( )</p>
-        </div>
-        <div class="toNumber">
-          <strong>String para Number</strong>
-          <img src="assets/conversaoParaNumber.PNG" alt="">
-          <p>console.log(typeof ToNumber)</p>
-          <p>typeof mostra o tipo,se é string ou number,boolean,etc...</p>
+        <h2>4. Convertendo valores</h2>
+        <button type="submit" class="buttonWhite" id="showValueConversions">Ver explicação</button>
+        <div class="hiden" id="valueconversions">
+          <div class="toString">
+            <strong>Number para string</strong>
+            <img src="assets/numeroToString.PNG" alt="">
+            <p>Colocar o number ao lado de .toString( )</p>
+          </div>
+          <div class="toNumber">
+            <strong>String para Number</strong>
+            <img src="assets/conversaoParaNumber.PNG" alt="">
+            <p>console.log(typeof ToNumber)</p>
+            <p>typeof mostra o tipo,se é string ou number,boolean,etc...</p>
+          </div>
         </div>
       </section>
 
 
       <section class="box-js" id="templateLiterals">
-        <h3>6. Criar variáveis e adicionar elas ao texto</h3>
-        <strong>(templateLiterals)</strong>
-        <div>
+        <h2>5. Juntar variáveis ao texto (templateLiterals)</h2>
+        <button type="submit" class="buttonWhite" id="showTemplateLiterals">Ver exemplos</button>
+        <div class="hiden" id="templateLiteralsExamples">
           <span>Ex:</span>
           <p>'O aluno Leonardo de 19 anos tirou 7 na prova'</p>
           <img src="assets/node-templateliteralsPNG.PNG" alt="">
           <p>`O aluno ${aluno} de ${idade} anos tirou ${nota} na prova`</p>
           <p>Basta colocar a variável dentro de ${} para mencionar ela,e colocar crases `` no lugar das aspas em volta</p>
-          <a href="group/templateLiterals.html" class="buttonWhite">Testar templateLiterals</a>
+          <pre>
+            var nome = prompt("Qual seu nome?")
+    console.log(nome)
+    var idade = prompt(`Olá ${nome}, Quantos anos
+     você tem?`)
+    console.log(idade)
+    alert("Que legal!")
+    document.write(`Seu nome é &lt;strong&gt;${nome}&lt;/strong&gt;;
+     e você tem <strong>${idade}</strong> anos. <br>`)
+    document.write(`Seu nome tem <strong>${nome.length}</strong> letras. <br>`)
+    document.write('Para contar a quantidade de letras
+     existentes no nome considere usar ${variavel.length}
+      igual mostra na foto abaixo: <br>')
+    document.write(`<img src="../assets/length.PNG" alt="">`)
+          </pre>
         </div>
       </section>
 
-      <section class="box-js" id="converter">
-        <h3>7. Mostrar segundo número após a virgula:</h3>
-        <div>
-          <img src="assets/centesimo.PNG" alt="">
-          <div>
-            <p>=</p>
-            <img src="assets/secondLether.PNG" alt="">
+      <section class="box-js" id="convertSecondNumber">
+        <h2>6. Mostrar segundo número após a virgula:</h2>
+        <button type="submit" id="showconvertSecNumb" class="buttonWhite">Ver explicação</button>
+        <div class="hiden" id="convertSecNumb">
+           <p>Exemplo 1:</p>
+          <div class="examples">
+            <pre>
+      let valor = 45.2
+      let resultado = valor.tofixed(2)
+      console.log(resultado)
+      saída do console = 45.20
+            </pre>
+          </div>
+          <p>Exemplo 2</p>
+          <div class="examples2">
+            
+            <img src="assets/centesimo.PNG" alt="">
+              <p>=</p>
+              <img src="assets/secondLether.PNG" alt="">
           </div>
         </div>
-        <h3 id="transformPoint">Transformar número com " . "  em " , " :</h3>
-        <div>
-          <img src="assets/pontoEmVirgula.PNG" alt="">
-          <div>
-            <p>=</p>
-            <img src="assets/resultPontoEmVirgula.PNG" alt="">
-          </div>
+      </section>
+      <section class="box-js" id="convertDotInComma">
+        <h2>7. Conversão de número ponto para vírgula:</h2>
+        <button type="submit" class="buttonWhite" id="showConvertDot">Ver explicação</button>
+        <div class="hiden" id="convertionDotComma">
+          <h3>Usando Replace:</h3>
+          <p>Mais simples de converter</p>
+          <pre>
+            let numero = "45.20"
+            let numeroComVirgula = numero.replace('.' , ',')
+            resultado: 45,20
+          </pre>
+          <h3>Usando toLocaleString()</h3>
+          <p>Este é o método recomendado porque ele lida automaticamente com o ponto decimal, separadores de milhar (se houver) e arredondamento, tudo de acordo com as regras do local (pt-BR).</p>
+          <ul>
+            <li>O método toLocaleString com 'pt-BR' garante:</li>
+            <li>1. Vírgula como separador decimal.</li>
+            <li>2. Ponto como separador de milhar.</li>
+            <li>3. Arredondamento (se não especificarmos o máximo de casas).</li>
+          </ul>
+            <pre>
+            let numero = 12345.789
+            let numeroBRL = numero.toLocaleString('pt-BR',{
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            })
+            </pre>
+          <ul>
+            <li>Garante que o resultado terá, NO MÍNIMO, 2 casas decimais.</li>
+            <li>Efeito: Se o número for '10', ele preenche para '10,00'.</li>
+          </ul>
+            <pre></pre>
+          
+              <ul>
+                <li>minimumFractionDigits: 2 </li>
+          <li>Garante que o resultado terá, NO MÁXIMO, 2 casas decimais.</li>
+          <li>maximumFractionDigits: 2</li>
+                <li>Efeito: Se o número for '123.456', ele arredonda para '123,46'.</li>
+              </ul>
         </div>
       </section>
 
       <section class="box-js" id="converterCoin">
-        <h3>8. Conversão de real, dólar e euro</h3>
-        <div>
-          <p>Real R$:</p>
+        <h2>8. Conversão de real, dólar e euro</h2>
+        <button type="submit" class="buttonWhite" id="showconverterCoin">Ver explicação</button>
+        <div class="hiden" id="converterCoinWrapper">
           <div>
-            <p>var n1 = 1543.5</p>
-            <p>console.log(n1)</p>
-            <p>console.log(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))</p>
+            <p>Real R$:</p>
+            <div>
+              <p>var n1 = 1543.5</p>
+              <p>console.log(n1)</p>
+              <p>console.log(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))</p>
+            </div>
+            <div>
+              <p>= </p>
+              <img src="assets/resultRealToBRL.PNG" alt="">
+            </div>
           </div>
           <div>
-            <p>= </p>
-            <img src="assets/resultRealToBRL.PNG" alt="">
-          </div>
-        </div>
-        <div>
-          <p>Dólar USD</p>
-          <div>
-            <p>var n2 = 1543.5</p>
-            <p>console.log(n2)</p>
-            <p>console.log(n2.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))</p>
-          </div>
-          <div>
-            <p>=</p>
-            <img src="assets/resultToUSD.PNG" alt="">
-          </div>
-        </div>
-        <div>
-          <p>Euro €</p>
-          <div>
-            <p>var n3 = 1543.5</p>
-            <p>console.log(n3)</p>
-            <p>console.log(n3.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}))</p>
+            <p>Dólar USD</p>
+            <div>
+              <p>var n2 = 1543.5</p>
+              <p>console.log(n2)</p>
+              <p>console.log(n2.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))</p>
+            </div>
+            <div>
+              <p>=</p>
+              <img src="assets/resultToUSD.PNG" alt="">
+            </div>
           </div>
           <div>
-            <p>=</p>
-            <img src="assets/resultToEUR.PNG" alt="">
+            <p>Euro €</p>
+            <div>
+              <p>var n3 = 1543.5</p>
+              <p>console.log(n3)</p>
+              <p>console.log(n3.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}))</p>
+            </div>
+            <div>
+              <p>=</p>
+              <img src="assets/resultToEUR.PNG" alt="">
+            </div>
           </div>
         </div>
       </section>
 
       <section class="box-js" id="ArithmeticOperators"> 
-        <h3>9. Operadores aritméticos</h3>
+        <h2>9. Operadores aritméticos</h2>
         <ul>
           <li>5 <span>+</span> 2 <span>=</span> 7</li>
           <li>5 <span>-</span> 2 <span>=</span> 3</li>
@@ -215,48 +315,50 @@
       </section>
 
       <section class="box-js" id="autoAssignment" >
-        <h3>10. Auto atribuição</h3>
-        <div id="standardFormat">
-          <h3>Formato longo(padrão)</h3>
-            <pre>Let valor = 10;</pre>
-            <pre>valor = valor + 5;</pre>
-              <p>valor + 5 soma o valor anterior mais o valor atual a ser somado</p>
-            <p>Resultado: valor é 15</p>
-        </div>
-
-        <div id="shortFormat">
-          <h3>Formato abreviado(Auto Atribuição)</h3>
-          <p>Em vez de escrever a variável duas vezes, você usa um operador de atalho (como +=, -=, *=, etc.).</p>
-            <div>
-              <span>+= </span>
-                <pre>x = x + y	</pre>
-                <p>Soma y e atribui o novo valor a x.</p>
-              <span>-=</span>
-              
-                <pre>x = x - y	</pre>
-                <p>Subtrai y e atribui o novo valor a x.</p>
-              
-              <span>*=</span>
-              
-                <pre>x = x * y	</pre>
-                <p>Multiplica por y e atribui o novo valor a x.</p>
-              
-              <span>/=</span>
-              
-                <pre>x = x / y	</pre>
-                <p>Divide por y e atribui o novo valor a x.</p>
-              
-              <span>%=</span>
-              
-                <pre>x = x % y	</pre>
-                <p>Calcula o resto da divisão por y e atribui a x</p>
-            </div>
-          <a href="group/autoatribuicao.html" class="buttonWhite">Ver exemplos</a>
+        <h2>10. Auto atribuição</h2>
+        <button type="submit" class="buttonWhite" id="showautoAssignment">Ver explicação</button>
+        <div class="hiden" id="autoAssignment-Wrapper">
+          <div id="standardFormat">
+            <h3>Formato longo(padrão)</h3>
+              <pre>Let valor = 10;</pre>
+              <pre>valor = valor + 5;</pre>
+                <p>valor + 5 soma o valor anterior mais o valor atual a ser somado</p>
+              <p>Resultado: valor é 15</p>
+          </div>
+          <div id="shortFormat">
+            <h3>Formato abreviado(Auto Atribuição)</h3>
+            <p>Em vez de escrever a variável duas vezes, você usa um operador de atalho (como +=, -=, *=, etc.).</p>
+              <div>
+                <span>+= </span>
+                  <pre>x = x + y	</pre>
+                  <p>Soma y e atribui o novo valor a x.</p>
+                <span>-=</span>
+          
+                  <pre>x = x - y	</pre>
+                  <p>Subtrai y e atribui o novo valor a x.</p>
+          
+                <span>*=</span>
+          
+                  <pre>x = x * y	</pre>
+                  <p>Multiplica por y e atribui o novo valor a x.</p>
+          
+                <span>/=</span>
+          
+                  <pre>x = x / y	</pre>
+                  <p>Divide por y e atribui o novo valor a x.</p>
+          
+                <span>%=</span>
+          
+                  <pre>x = x % y	</pre>
+                  <p>Calcula o resto da divisão por y e atribui a x</p>
+              </div>
+            <a href="group/autoatribuicao.html" class="buttonWhite">Ver exemplos</a>
+          </div>
         </div>
       </section>
 
       <section class="box-js" id="increment"> 
-        <h2>11. Incremento</h2>
+        <h2>10. Incremento</h2>
         <h3>Como incremento funciona(++)</h3>
         <p>O uso do operador ++ é um atalho para a operação completa de auto atribuição de soma</p>
         <h3>Pré-incremento (++variável)</h3>
@@ -290,7 +392,7 @@
       </section>
 
       <section class="box-js" id="relational">
-        <h2>12. Relacionais</h2>
+        <h2>11. Relacionais</h2>
         <p>Os Operadores Relacionais (ou de Comparação) em JavaScript são usados para  comparar dois valores (operandos) e determinar a relação entre eles. </p>
         <h3>1. Operadores de Maior, Menor, Maior ou Igual e Menor ou Igual</h3>
         <ol>
@@ -364,7 +466,7 @@
       </section>
 
       <section class="box-js" id="logics">
-        <h2>Lógicos</h2>
+        <h2>12. Lógicos</h2>
         <div class="negation">
           <h3>! negação</h3>
           <p>Só tem um operando,após a exclamação coloca True,False ou uma expressão que termina em True ou False</p>
@@ -432,7 +534,7 @@
       </section>
 
       <section class="box-js" id="orderOfPrecedence">
-        <h3>Ordem de precedência</h3>
+        <h2>13. Ordem de precedência</h2>
         <div>
           <img src="assets/arrowdown.svg" alt="">
           <ul>
@@ -454,7 +556,7 @@
       </section>
 
       <section class="box-js" id="ternary">
-        <h3>Ternário</h3>
+        <h2>14. Ternário</h2>14. 
         <p>É composto por dois pontos dentro de uma mesma expressão,eles são: <small>?</small> <small>:</small></p>
         <p>Se chama ternário pois ele tem três partes.</p>
         <ul>
@@ -478,7 +580,7 @@
       </section>
 
       <section class="box-js" id="DOM">
-        <h3>Document Object Model (DOM)</h3>
+        <h2>15. Document Object Model (DOM)</h2>
         <p>Selecionar um elemento HTML pela TAG</p>
         <img src="assets/DOMByTagName.PNG" alt="">
         <p>Selecionando a 3º tag p "Parágrafo 3"</p>
@@ -505,7 +607,7 @@
       </section>
 
       <section class="box-js" id="conditions">
-        <h2>Condições</h2>
+        <h2>16. Condições</h2>
         <p>As condições são o que permitem o código tomar decisões. Ela faz com que o programa execute dois caminhos dependendo se a situação é verdadeira ou falsa.</p>
         <h3>Condição simples:</h3>
         <p>Somente com if</p>
@@ -584,7 +686,7 @@ var agora = new Date()
           <p>Dica: pegar hora exata do sistema variavel.getHours,pegar minuto variavel.getMinutes,... </p>
         </div>
 
-        <div class="multipleConditions">
+        <div class="multipleConditions boxInRed">
           <h3>Condição múltipla (switch)</h3>
           <img src="assets/condiçãoMultipla.PNG" alt="">
           <p>Tem a possibilidade de varios valores fixos.</p>
@@ -638,14 +740,14 @@ switch(diaSem){
     break
 }
           </pre>
-        </div>
-        <div class="buttonWhite">
-          <a href="group/ifElse.html">Ver exemplos de if & else</a>
+          <div class="buttonWhite">
+            <a href="group/ifElse.html">Ver exemplos de if & else</a>
+          </div>
         </div>
       </section>
 
       <section class="box-js" id="regex">
-        <h2>Expressão Regular (ou Regex)</h2>
+        <h2>17. Expressão Regular (ou Regex)</h2>
         <p>Uma Expressão Regular é uma sequência de caracteres que define um padrão de busca.</p>
         <p>São eles:</p>
         <ul>
@@ -724,7 +826,7 @@ switch(diaSem){
       </section>
 
       <section class="box-js" id="object">
-        <h1>Objetos</h1>
+        <h2>18. Objetos</h2>
         <p>Um objeto é uma estrutura que representa algo com propriedades e comportamentos.</p>
           <h3 class="marg1rem">Métodos e Interpolação</h3>
           <div>
@@ -813,8 +915,7 @@ const user = {
       console.log(product["quantity"])
        Saída: 50
       
-      <h2>Outro exemplo de 
-notação de colchetes</h2>
+      <h2><small>Outro exemplo de notação de colchetes</small></h2>
 console.log(user["email"])
 console.log(user["name"]["surname"])
 user["message"]()
@@ -855,8 +956,7 @@ user["message"]()
       const automovel = {
         yourName: "Leonardo",
         message: <code>() => {</code>
-      console.log(`Olá
-      ${this.yourName}`)
+      console.log(`Olá${this.yourName}`)
         }
       }
       automovel.message()
@@ -866,36 +966,69 @@ user["message"]()
     
     
 
-    <h2 class="titulo-subsecao" id="optionalChaining">Optional Chaining (<code>?.</code>)</h2>
-    <p>Se uma propriedade aninhada (ou função) for null ou undefined (ou não tiver valor), a expressão retorna <code>undefined</code> em vez de gerar um erro.</p>
-    
-    <div class="exemplo-box">
-        <pre>
-<small>
-  const user = {
-    id: 1,
-    name: "Leonardo",
-    address: {
+    <div id="optionalChaining">
+      <h2 class="titulo-subsecao">Optional Chaining (<code>?.</code>)</h2>
+      <p>Serve para quando não sabemos se a propriedade existe ou se tem valor ou não.</p>
+      <p>Se uma propriedade aninhada (ou função) for null ou undefined (ou não tiver valor), a expressão retorna <code>undefined</code> em vez de gerar um erro.</p>
+      
+      <div class="exemplo-box">
+          <pre>
+      <small>
+        const user = {
+        id: 1,
+        name: "Leonardo",
+        address: {
       street: "Avenida Brasil",
-    },
-    message: function(){
-      console.log(`Olá,${this.name}`)
-    }
-  }
-</small>
-
-O "?." evita um erro se 'geo'
- ou 'latitude' não existir. 
- <code><small>console.log(user?.address?.geo?.latitude) </small></code>
- Saída: undefined (sem erro!)
-
-Também funciona para funções,
- executando-a apenas se ela existir.
-<code><small>user.message?.()</small></code>
- Executa a função 'message' 
- com segurança.</pre>
+      city: "São Paulo",
+      geo: {
+        latitude: 47.808,
+        longitude: 17.5674,
+      },
+        },
+        message: function(){
+      console.log(`Olá, ${this.name}`)
+        }
+      }
+      </small>
+      </pre>
+      
+      O "?." evita um erro se 'geo' ou 'latitude' não existir. 
+       <p>Perguntando se latitude existe:</p>
+       <code><small>console.log(user?.address?.geo?.latitude) </small></code>
+        <p>Caso não exista, valor será:</p>
+       <pre>undefined (sem erro!)</pre>
+      
+      <p>
+        Também funciona para funções,
+         executando-a apenas se ela existir.
+      </p>
+      <code><small>user.message?.()</small></code>
+       <p>
+         Executa a função 'message' com segurança.
+       </p>
+      </div>
     </div>
-</section>
+
+    <div class="nullishCoalescing">
+      <h2>OPERADOR DE COALESCÊNCIA NULA (??)</h2>
+      <p>Operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é null ou undefined. Caso contrário, ele retorna o seu operando do lado esquerdo.</p>
+      <pre>
+let content = null
+console.log(content ?? "conteúdo padrão")
+      </pre>
+      <p>OPERADOR DE COALESCÊNCIA NULA (??) verifica se content é null,se for null irá executar a string após "??"</p>
+      <p>Mas se content tiver algum valor além de nulo ou undefined ele mostrará o conteúdo</p>
+      <p>FALSE ele entende como conteúdo,e não como null/undefined</p>
+      <pre>
+const user = {
+  name: "Leonardo",
+  avatar: undefined
+}
+
+console.log(user.avatar ?? "default.png")
+      </pre>
+    </div>
+      </section>
 
       
     </article>

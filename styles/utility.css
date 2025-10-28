@@ -8,13 +8,26 @@ body {
   background-color: rgb(75, 22, 134);
   box-shadow: rgba(0, 0, 0, 0.342) 4px 4px 10px;
   border-radius: 1rem;
-  width: 22rem;
+  width: 33rem;
   margin: auto;
   padding: 1rem;
 
   & img {
     border: 4px solid rgb(56, 9, 109);
   }
+}
+
+ .hiden {
+    display: none;
+  }
+
+.boxInRed {
+  display: grid;
+  border-radius: 0.5rem;
+  background-color: rgb(95, 1, 1);
+  padding: 0.5rem;
+  gap: 1rem;
+  margin-inline: -15px;
 }
 
 & .buttonWhite{
@@ -24,9 +37,13 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   margin-block: 1rem;
-  display: block;
   text-align: center;
   transition: background-color 450ms linear,outline 750ms linear;
+  display: grid;
+  justify-self: center;
+  border: none;
+  cursor: pointer;
+  font: var(--font1-5rem);
 
   &:hover{
     background-color: rgb(138, 138, 138);
@@ -108,4 +125,11 @@ ul {
       background-color: rgb(99, 26, 196);
     }
   } 
+}
+
+@media (width >=64rem){
+  .box-js {
+  width: 97%;
+  margin-inline: 1rem;
+}
 }
