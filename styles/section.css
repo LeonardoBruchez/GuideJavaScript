@@ -1,3 +1,103 @@
+& header {
+  display: grid;
+  justify-items: center;
+  &> .titleJS {
+    justify-content: center;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  
+      & > h1{
+      text-align: center;
+      font: var(--font1-5rem500);
+      color: white;
+    }
+  
+    & img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: .5rem;
+    }
+  }
+  &> h1 {
+      font:var(--font2rem700);
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+  & > #IconProfile {
+    display: grid;
+    justify-self: center;
+    border-radius: 20rem;
+    margin-block: 4rem 1.4rem ;
+    width: 17rem;
+    border: 3px solid rgb(71, 12, 207);
+  }
+
+}
+.Social-wrapper{
+  background-color: rgb(34, 0, 128);
+  display: grid;
+  grid-auto-flow: row;
+  color: white;
+  gap: 1rem;
+  width: 20rem;
+  padding-block: 1rem;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin: auto;
+  justify-self: center;
+  font-family: cursive;
+
+  .Links-Wrapper{
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  & #LinkedinIcon{
+    width: fit-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 4rem;
+      align-items: center;
+      justify-self: center;
+      display: grid;
+    }
+  }
+  
+  & #githubIcon{
+     width: fit-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 4rem;
+      align-items: center;
+      justify-self: center;
+      display: grid;
+    }
+  }
+
+  & #InstagramIcon{
+    width: fit-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 4rem;
+      align-items: center;
+      justify-self: center;
+      display: grid;
+    }
+  }
+}
+
+.space{
+  margin-block: 2rem;
+}
 #java-script {
   display: grid;
   gap: 2rem;
@@ -12,28 +112,12 @@
   box-shadow: rgba(0, 0, 0, 0.342) 4px 4px 10px;
   color: rgb(255, 255, 255);
 
-  &> h1 {
-      font:var(--font2rem700);
-      text-align: center;
-      margin-top: 2rem;
-    }
-  &> .titleJS {
-    justify-content: center;
-    gap: 1rem;
-    display: flex;
-    align-items: center;
-
-      & > p{
-      text-align: center;
-      font: var(--font1-5rem500);
-    }
-  
-    & img {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: .5rem;
-    }
+  & > h1 {
+    text-align: center;
+    margin-block: 1rem;
   }
+
+
 
   
 
@@ -268,6 +352,15 @@
     }
 
     &>div {
+
+      & pre {
+        background-color: rgb(83, 83, 83);
+        padding-block: 0.4rem;
+        border-radius: 0.5rem;
+        & img {
+          width: 150px;
+        }
+      }
       & p:nth-child(2){
         background-color: rgb(61, 7, 131);
         font: var(--font1rem);
@@ -280,7 +373,7 @@
         border-radius: 1rem;
         justify-self: center;
         display: grid;
-        width: 20rem;
+        width: 15rem;
       }
 
       & p:nth-child(4){
@@ -1283,6 +1376,64 @@
 
 
 @media (width >= 43.75rem) {
+  .Social-wrapper{
+  background-color: rgb(34, 0, 128);
+  display: grid;
+  grid-auto-flow: row;
+  color: white;
+  gap: 1rem;
+  width: 35rem;
+  padding-block: 1rem;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-block: 2rem;
+  justify-self: center;
+  font-family: cursive;
+
+  .Links-Wrapper{
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  & #LinkedinIcon{
+    width: fit-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 4rem;
+      align-items: center;
+      justify-self: center;
+      display: grid;
+    }
+  }
+  
+  & #githubIcon{
+     width: fit-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 4rem;
+      align-items: center;
+      justify-self: center;
+      display: grid;
+    }
+  }
+
+  & #InstagramIcon{
+    width: fit-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 4rem;
+      align-items: center;
+      justify-self: center;
+      display: grid;
+    }
+  }
+}
 
   #java-script {
     max-width: 1000px;

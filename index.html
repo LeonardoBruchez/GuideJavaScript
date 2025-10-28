@@ -7,20 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My room study</title>
   <link rel="stylesheet" href="styles/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
 </head>
 <body>
   <main>
     <header>
-    </header>
-
-    <article id="java-script">
-      <h1>My room study </h1>
-      
-      <div  class="titleJS">
-        <p>Java Script</p>
+      <div  class="titleJS" id="titleJS">
+        <h1>My Road in Java Script</h1>
         <img src="assets/JavaScript-logo.png" alt="">
       </div>
+      <img src="assets/avatar.png" alt="" id="IconProfile">
+    </header>
+    <div class="Social-wrapper">
+      <p>Me siga nas redes sociais:</p>
+      <div class="Links-Wrapper">
+        <a href="https://www.linkedin.com/in/leonardo-bruchez-280635356" target="_blank" id="LinkedinIcon">
+          <img src="assets/linkedin-logo.svg" alt="">
+        </a>
+        <a href="https://github.com/LeonardoBruchez" id="githubIcon" target="_blank">
+          <img src="assets/githubIcon.svg" alt="" >
+        </a>
+        <a href="https://www.instagram.com/bruchezleo" id="InstagramIcon" target="_blank">
+          <img src="assets/instagram-logo.svg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="space"></div>
+
+    <article id="java-script">
+      <h1>Guia de Javascript</h1>
       
       <button type="submit" id="showSumary">Ver sumário</button>
 
@@ -204,19 +220,23 @@ Proibido ❌
           <p>`O aluno ${aluno} de ${idade} anos tirou ${nota} na prova`</p>
           <p>Basta colocar a variável dentro de ${} para mencionar ela,e colocar crases `` no lugar das aspas em volta</p>
           <pre>
-            var nome = prompt("Qual seu nome?")
-    console.log(nome)
-    var idade = prompt(`Olá ${nome}, Quantos anos
-     você tem?`)
-    console.log(idade)
-    alert("Que legal!")
-    document.write(`Seu nome é &lt;strong&gt;${nome}&lt;/strong&gt;;
-     e você tem <strong>${idade}</strong> anos. <br>`)
-    document.write(`Seu nome tem <strong>${nome.length}</strong> letras. <br>`)
-    document.write('Para contar a quantidade de letras
-     existentes no nome considere usar ${variavel.length}
-      igual mostra na foto abaixo: <br>')
-    document.write(`<img src="../assets/length.PNG" alt="">`)
+var nome = prompt("Qual seu
+ nome?")
+console.log(nome)
+var idade = prompt(`Olá 
+${nome}, Quantos anos
+você tem?`)
+console.log(idade)
+alert("Que legal!")
+document.write(`Seu nome é 
+&lt;strong&gt;${nome}&lt;/strong&gt;;
+e você tem ${idade} anos. <br>`)
+document.write(`Seu nome tem 
+${nome.length} letras. <br>`)
+document.write('Para contar a
+ quantidade de letras
+existentes no nome considere 
+usar ${variavel.length}
           </pre>
         </div>
       </section>
@@ -1081,7 +1101,7 @@ Proibido ❌
 
 
 
-  <a href="#java-script" id="button">
+  <a href="#titleJS" id="button">
     <img src="https://icons.iconarchive.com/icons/icons8/ios7/128/Arrows-Up-4-icon.png" width="60" height="60">
   </a>
   <script src="scripts.js"></script>
